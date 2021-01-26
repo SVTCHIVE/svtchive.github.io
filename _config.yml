@@ -17,6 +17,7 @@ google_analytics:   UA-XXXXXXXXX-X # out your google-analytics code
 
 # Build settings
 markdown:           kramdown
+permalink:          /:title/
 paginate:           10
 paginate_path:      "/playlists/page:num/"
 plugins:
