@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "소개합니다"
+title: "🥁소개합니다"
 subtitle: "데이식스 퀵 플레이리스트"
 date: 2021-01-16 18:00:00 -0400
 background: '/img/posts/02.jpg'
