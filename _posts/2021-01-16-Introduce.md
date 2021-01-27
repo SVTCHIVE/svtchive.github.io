@@ -3,7 +3,7 @@ layout: post
 title: "소개합니다🥁"
 subtitle: "데이식스 퀵 플레이리스트"
 date: 2021-01-16 18:00:00 -0400
-background: '/img/posts/02.jpg'
+background: '/img/posts/01.jpg'
 ---
 
 <p><a href="https://day6.kr/all"><img src="/img/banner/all.png" alt="모든 플레이리스트" width="100%" height="100%"></a><br>
