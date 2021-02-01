@@ -19,8 +19,8 @@ layout: default
             {% endif %}
             <span class="meta">
               <a href="#">{% if page.author %}{{ page.author }}{% else %}{{ site.author }}{% endif %}</a>
-              | 플레이리스트 | {{ page.date | date: '%Y.%m.%d.' }} &middot; {% include read_time.html
-              content=page.content %}
+              | 플레이리스트 | {{ page.date | date: '%Y.%m.%d.' }}<!-- &middot; {% include read_time.html
+              content=page.content %} -->
             </span>
           </div>
         </div>
