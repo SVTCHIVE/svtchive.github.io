@@ -34,6 +34,8 @@ layout: default
 
         {{ content }}
 
+        <hr>
+        
         <!-- SNS share websites -->
         <script type="text/javascript" async>
         var url_default_ks = "https://story.kakao.com/share?url=";
@@ -48,25 +50,36 @@ layout: default
         var url_combine_fb = url_default_fb + url_this_page;
         var url_combine_tw = url_default_tw_txt + document.title + url_default_tw_url + url_this_page;
         var url_combine_naver = url_default_naver + encodeURI(url_this_page) + title_default_naver + encodeURI(title_this_page);
+        var copyLink = function(str) {
+            if( is_ie() ) {
+                window.clipboardData.setData("Text", str);
+                alert("복사되었습니다.");
+                return;
+            }
+            prompt("Ctrl+C를 눌러 복사하세요.", str);
+        };
+        
         </script>
 
         <!-- SNS share buttons -->
         <div style="width: 100%; text-align: center; margin-bottom: 64px;">
         <!-- Facebook share button -->
         <a href="" onclick="window.open(url_combine_fb, '', 'scrollbars=no, width=600, height=600'); return false;">
-        <img src="https://imgur.com/2pxqHxt.png" title="페이스북으로 공유하기" class="sharebtn_custom" style="width: 48px;"></a>
+        <img src="/img/socialmedia/facebook.png" title="페이스북으로 공유하기" class="sharebtn_custom" style="width: 48px;"></a>
         <!-- Twitter share button -->
         <a href="" onclick="window.open(url_combine_tw, '', 'scrollbars=no, width=600, height=600'); return false;">
-        <img src="https://imgur.com/z7V4qga.png" title="트위터로 공유하기" class="sharebtn_custom" style="width: 48px;"></a>
+        <img src="/img/socialmedia/twitter.png" title="트위터로 공유하기" class="sharebtn_custom" style="width: 48px;"></a>
         <!-- Naver share button -->
         <a href="" onclick="window.open(url_combine_naver, '', 'scrollbars=no, width=600, height=600'); return false;">
-        <img src="https://imgur.com/AYqtESo.png" title="네이버로 공유하기" class="sharebtn_custom" style="width: 48px;"></a>
+        <img src="/img/socialmedia/naver.png" title="네이버로 공유하기" class="sharebtn_custom" style="width: 48px;"></a>
         <!-- Kakao story share button -->
-        <a href="" onclick="window.open(url_combine_ks, '', 'scrollbars=no, width=600, height=600'); return false;">
-        <img src="https://imgur.com/mIW39pd.jpg" title="카카오스토리로 공유하기" class="sharebtn_custom" style="width: 48px;"></a>
+        <a href="javascript:;" onclick="copylink(url_combine_ks, '', 'scrollbars=no, width=600, height=600'); return false;">
+        <img src="/img/socialmedia/clipboard.png" title="클립보드에 복사하기" class="sharebtn_custom" style="width: 48px;"></a>
         </div>
         
-        <!-- <hr> -->
+        
+        
+        
 
         <div class="clearfix">
 
