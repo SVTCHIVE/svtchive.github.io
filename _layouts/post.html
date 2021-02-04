@@ -38,17 +38,12 @@ layout: default
         
         <!-- Social media share websites -->
         <script type="text/javascript" async>
+        var url_default_ks = "https://story.kakao.com/share?url=";
         var url_default_fb = "https://www.facebook.com/sharer/sharer.php?u=";
         var url_default_tw_txt = "https://twitter.com/intent/tweet?text=";
         var url_default_tw_url = "&url=";
         var url_default_naver = "http://share.naver.com/web/shareView.nhn?url=";
         var title_default_naver = "&title=";
-        var url_this_page = location.href;
-        var title_this_page = document.title;
-        var url_combine_ks = url_default_ks + url_this_page;
-        var url_combine_fb = url_default_fb + url_this_page;
-        var url_combine_tw = url_default_tw_txt + document.title + url_default_tw_url + url_this_page;
-        var url_combine_naver = url_default_naver + encodeURI(url_this_page) + title_default_naver + encodeURI(title_this_page);
         var copyLink = function(str) {
             if( is_ie() ) {
                 window.clipboardData.setData("Text", str);
@@ -57,6 +52,13 @@ layout: default
             }
             prompt("Ctrl+C를 눌러 복사하세요.", str);
         };
+        var url_this_page = location.href;
+        var title_this_page = document.title;
+        var url_combine_ks = url_default_ks + url_this_page;
+        var url_combine_fb = url_default_fb + url_this_page;
+        var url_combine_tw = url_default_tw_txt + document.title + url_default_tw_url + url_this_page;
+        var url_combine_naver = url_default_naver + encodeURI(url_this_page) + title_default_naver + encodeURI(title_this_page);
+        
         
         </script>
 
@@ -71,8 +73,8 @@ layout: default
         <!-- Naver share button -->
         <a href="" onclick="window.open(url_combine_naver, '', 'scrollbars=no, width=600, height=600'); return false;">
         <img src="/img/socialmedia/naver.png" title="네이버로 공유하기" class="sharebtn_custom" style="width: 48px;"></a>
-        <!-- url copy button -->
-        <a href="javascript:;" onclick="copylink(url_this_page); return false;">
+        <!-- Kakao story share button -->
+        <a href="javascript:;" onclick="copylink('url_this_page'); return false;">
         <img src="/img/socialmedia/clipboard.png" title="클립보드에 복사하기" class="sharebtn_custom" style="width: 48px;"></a>
         </div>
         
