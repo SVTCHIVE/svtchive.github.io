@@ -35,7 +35,7 @@ layout: default
         {{ content }}
 
         <hr>
-        
+
         <!-- Social media share websites -->
         <script type="text/javascript" async>
         var url_default_ks = "https://story.kakao.com/share?url=";
@@ -58,8 +58,8 @@ layout: default
         var url_combine_fb = url_default_fb + url_this_page;
         var url_combine_tw = url_default_tw_txt + document.title + url_default_tw_url + url_this_page;
         var url_combine_naver = url_default_naver + encodeURI(url_this_page) + title_default_naver + encodeURI(title_this_page);
-        
-        
+
+
         </script>
 
         <!-- SNS share buttons -->
@@ -74,13 +74,13 @@ layout: default
         <a href="" onclick="window.open(url_combine_naver, '', 'scrollbars=no, width=600, height=600'); return false;">
         <img src="/img/socialmedia/naver.png" title="네이버로 공유하기" class="sharebtn_custom" style="width: 48px;"></a>
         <!-- Kakao story share button -->
-        <a href="" onclick="copyLink(location.href);">
+        <a href="" onclick="copyLink('location.href');">
         <img src="/img/socialmedia/clipboard.png" title="클립보드에 복사하기" class="sharebtn_custom" style="width: 48px;"></a>
         </div>
-        
-        
-        
-        
+
+
+
+
 
         <div class="clearfix">
 
