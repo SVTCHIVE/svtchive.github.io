@@ -37,6 +37,11 @@ layout: default
         <hr>
 
         <!-- Social media share websites -->
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js"></script>
+
         <script type="text/javascript" async>
         var url_default_ks = "https://story.kakao.com/share?url=";
         var url_default_fb = "https://www.facebook.com/sharer/sharer.php?u=";
@@ -44,14 +49,17 @@ layout: default
         var url_default_tw_url = "&url=";
         var url_default_naver = "http://share.naver.com/web/shareView.nhn?url=";
         var title_default_naver = "&title=";
-        var copyLink = function(str) {
-            if( is_ie() ) {
-                window.clipboardData.setData("Text", str);
-                alert("복사되었습니다.");
-                return;
-            }
-            prompt("Ctrl+C를 눌러 복사하세요.", str);
-        };
+        var copyLink = Clipboard('.btn');
+        clipboard.on('success', function(e){
+          console.log("복사가 완료됐어요!");
+
+          var selection = window.getSelection();
+          selection.removeAllRanges();
+        });
+        clipboard.on('error', function(e){
+          conesole.log("어라, 복사를 실패했어요.")
+        });
+
         var url_this_page = location.href;
         var title_this_page = document.title;
         var url_combine_ks = url_default_ks + url_this_page;
@@ -73,15 +81,14 @@ layout: default
         <!-- Naver share button -->
         <a href="" onclick="window.open(url_combine_naver, '', 'scrollbars=no, width=600, height=600'); return false;">
         <img src="/img/socialmedia/naver.png" title="네이버로 공유하기" class="sharebtn_custom" style="width: 48px;"></a>
-        <!-- clipboard button -->
-        <a href="" onclick="copyLink('location.href');">
-        <img src="/img/socialmedia/clipboard.png" title="클립보드에 복사하기" class="sharebtn_custom" style="width: 48px;"></a>
+        <!-- Target -->
+        <input id="day" value=location.href>
+        <!-- Trigger -->
+        <button class="btn" data-clipboard-target="#day">
+        <img src="/img/socialmedia/clipboard.png" alt="클립보드에 복사하기">
+        </button>
 
-        <a href="javascript:;" onclick="copyLink('yourlink.com');">링크복사</a>
         </div>
-
-
-
 
 
         <div class="clearfix">
