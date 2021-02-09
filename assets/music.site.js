@@ -152,7 +152,7 @@ function musicsite(site, theme) {
         title: '발급 완료!🎉',
         text: '위의 이미지를 저장하고 플로에서 플레이리스트를 만드세요!',
         imageUrl: flo_image[theme],
-        imageHeight: 1000,
+        imageHeight: 750,
         imageAlt: 'Playlist image',
         confirmButtonText: '알겠어요!'
       })
@@ -171,7 +171,7 @@ function musicsite(site, theme) {
         title: '발급 완료!🎉',
         text: '위의 이미지를 저장하고 플로에서 플레이리스트를 만드세요!',
         imageUrl: flo_image[theme],
-        imageHeight: 1000,
+        imageHeight: 750,
         imageAlt: 'Playlist image',
         confirmButtonText: '알겠어요!'
       })
