@@ -9,6 +9,7 @@ function musicsite(site, theme) {
   var melon_ipad = "melonipad://play/?ctype=1&menuid=0&cid=";
   var genie_iphone = "ktolleh00167://landing/?landing_type=31&landing_target=";
   var genie_android = "cromegenie://scan/?landing_type=31&landing_target=";
+  var genie_web = "https://www.genie.co.kr/player/shareProcessV2?xgnm=";
   var bugs = "bugs3://app/tracks/lists?title=전체듣기&miniplay=Y&track_ids=";
   var vibe = "vibe://listen?version=3&trackIds=";
 
@@ -81,6 +82,29 @@ function musicsite(site, theme) {
 
   var music_site_url;
 
+  var ok = 0;
+  var icon = ["error", "success"];
+  var title = ["지원하지 않는 디바이스예요.😥", "좋았어요!🎉"];
+
+  if ( ( mobie && site < 5 ) || site == 2) ok = 1;
+  else ok = 0;
+
+  const Toast = Swal.mixin({
+    toast: true,
+    position: 'top',
+    showConfirmButton: false,
+    timer: 2500,
+    timerProgressBar: false,
+    didOpen: (toast) => {
+      toast.addEventListener('mouseenter', Swal.stopTimer)
+      toast.addEventListener('mouseleave', Swal.resumeTimer)
+    }
+  })
+  Toast.fire({
+    icon: icon[ok],
+    title: title[ok]
+  })
+
   if (mobile){
     // site 1 - 4 case
     if(site == 1){
@@ -93,24 +117,7 @@ function musicsite(site, theme) {
     }
     else if(site == 3) music_site_url = bugs + bugs_songid[theme];
     else if(site == 4) music_site_url = vibe + vibe_songid[theme];
-    if(site < 5){
-      const Toast = Swal.mixin({
-        toast: true,
-        position: 'top',
-        showConfirmButton: false,
-        timer: 2500,
-        timerProgressBar: false,
-        didOpen: (toast) => {
-          toast.addEventListener('mouseenter', Swal.stopTimer)
-          toast.addEventListener('mouseleave', Swal.resumeTimer)
-        }
-      })
-      Toast.fire({
-        icon: 'success',
-        title: '좋았어요!🎉'
-      })
-      location.href = music_site_url;
-    }
+    if(site < 5)  location.href = music_site_url;
     else{
       Swal.fire({
         icon: 'success',
@@ -120,26 +127,10 @@ function musicsite(site, theme) {
         imageHeight: 700,
         imageAlt: 'Playlist image',
         confirmButtonText: '알겠어요!',
-        footer: '<a href="https://day6.kr/intro">어떻게 플레이리스트를 만드나요?</a>'
+        footer: ''<a href="https://day6.kr/intro" style="color:#28acff">어떻게 플레이리스트를 만드나요?</a>'
       })
     }
   }
-  else {
-      // other
-    const Toast = Swal.mixin({
-      toast: true,
-      position: 'top',
-      showConfirmButton: false,
-      timer: 2500,
-      timerProgressBar: false,
-      didOpen: (toast) => {
-        toast.addEventListener('mouseenter', Swal.stopTimer)
-        toast.addEventListener('mouseleave', Swal.resumeTimer)
-      }
-    })
-    Toast.fire({
-      icon: 'error',
-      title: '지원하지 않는 디바이스예요.😔'
-    })
-  }
+  else
+    if(site == 2) location.href = genie_web + genie_songid[theme];
 }
