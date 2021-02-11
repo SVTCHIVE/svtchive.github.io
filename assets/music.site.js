@@ -132,5 +132,5 @@ function musicsite(site, theme) {
     }
   }
   else
-    if(site == 2) location.href = genie_web + genie_songid[theme];
+    if(site == 2) window.open( genie_web + genie_songid[theme], '', 'scrollbars=no, width=600, height=600');
 }
