@@ -136,6 +136,7 @@ function musicsite(site, theme) {
         imageHeight: 750,
         imageAlt: 'Playlist image',
         confirmButtonText: '알겠어요!'
+        footer: '<a href="https://day6.kr/Introduce">어떻게 플레이리스트를 만드나요?</a>'
       })
     }
   }
@@ -155,6 +156,7 @@ function musicsite(site, theme) {
         imageHeight: 750,
         imageAlt: 'Playlist image',
         confirmButtonText: '알겠어요!'
+        footer: '<a href="https://day6.kr/Introduce">어떻게 플레이리스트를 만드나요?</a>'
       })
     }
   }
@@ -174,6 +176,7 @@ function musicsite(site, theme) {
         imageHeight: 750,
         imageAlt: 'Playlist image',
         confirmButtonText: '알겠어요!'
+        footer: '<a href="https://day6.kr/Introduce">어떻게 플레이리스트를 만드나요?</a>'
       })
     }
   }
