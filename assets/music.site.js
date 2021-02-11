@@ -86,7 +86,7 @@ function musicsite(site, theme) {
   var icon = ["error", "success"];
   var title = ["지원하지 않는 디바이스예요.😥", "좋았어요!🎉"];
 
-  if ( ( mobie && site < 5 ) || site == 2) ok = 1;
+  if ( ( mobile && site < 5 ) || site == 2) ok = 1;
   else ok = 0;
 
   const Toast = Swal.mixin({
