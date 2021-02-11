@@ -22,7 +22,7 @@ background: '/img/posts/01.jpg'
 
 <h3 id="플로-플레이리스트-이용-방법">플로 플레이리스트 이용 방법</h3>
 
-<p><img src="/img/guide-flo/01.png" alt="플로 이용방법 01" width="100%" height="100%"></a><br>
+<p><img src="/img/guide-flo/01.png" alt="플로 이용방법 01" width="100%" height="100%"><br>
 <p>먼저, 담고 싶은 플레이리스트에서 플로 버튼을 누른 뒤 <strong>화면에 나오는 이미지를 다운로드</strong>해 주세요. 그리고 플로에 들어가 <strong>보관함 > 캡처 이미지로 만들기</strong>를 눌러 방금 받은 플레이리스트 이미지를 업로드해 주세요.</p>
-<p><img src="/img/guide-flo/02.png" alt="플로 이용방법 01" width="100%" height="100%"></a><br>
-<p>잠시만 기다리면 멋진 플레이리스트가 눈앞에 나타날 거예요!🙂</p>
+<p><img src="/img/guide-flo/02.png" alt="플로 이용방법 02" width="100%" height="100%"><br>
+<p>잠시만 기다리면 멋진 플레이리스트가 눈앞에 나타날 거예요!😆</p>
