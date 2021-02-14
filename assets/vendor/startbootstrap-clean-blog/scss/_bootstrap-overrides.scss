@@ -83,3 +83,29 @@
 .s_btn-5 {
   background-image: linear-gradient(to right, #e9c4d4 0%, #e4cce1 51%, #ee6a96 100%);
 }
+
+.m_btn {
+  flex: 1 1 auto;
+  margin: 2px;
+  padding: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  text-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+  box-shadow: 0 5px 20px #777;
+  border-radius: 50px;
+  text-decoration: none;
+ }
+
+ .m_btn:hover {
+   background-position: right  center; /* change the direction of the change here */
+   text-decoration: none;
+   color: white;
+   box-shadow: 0 5px 20px #999;
+ }
+
+ .m_btn-1 {
+   background-image: linear-gradient(to right, #faaca8 0%, #f7b0b0 51%, #ee6a96 100%);
+ }
