@@ -24,24 +24,6 @@ layout: default
     </div>
   </header>
 
-<!-- 컴백 후 업데이트 예정 / 혹시 소스코드 보셨더라도 모르는 척 해주세요!
-  <header class="masthead" style="background-image: url('/img/posts/01.jpg')">
-    <div class="overlay"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
-          <div class="banner-heading">
-            <h1>DAY6 Support Playlist</h1>
-            <span class="subheading">데이식스 서포트 플레이리스트를 여기서 담아보세요!</span>
-            <div style="width: 40%; justify-content: center; align-items: center; text-align: center; flex-wrap: wrap; margin: 0 auto; margin-top: 10px; display: flex;">
-              <a href="/all" class="m_btn m_btn-1">담으러 가기🔥</a></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
--->
-
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
@@ -54,33 +36,11 @@ layout: default
         <article class="post-preview">
           <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
             <h3 class="post-title">{{ post.title }}</h3>
-            <!-- {% if post.subtitle %}
-            <h3 class="post-subtitle">{{ post.subtitle }}</h3>
-            {% else %}
-            <h3 class="post-subtitle">{{ post.excerpt | strip_html | truncatewords: 15 }}</h3>
-            {% endif %}
-          </a>
-          <p class="post-meta">
-            <!-- {% if post.author %}
-            {{ post.author }}
-            {% else %}
-            {{ site.author }}
-            {% endif %}
-            | 플레이리스트 |
-            {{ post.date | date: '%Y.%m.%d.' }}<!-- &middot; {% include read_time.html content=post.content %}
-          </p> -->
         </article>
 
         <hr>
 
         {% endfor %}
-
-        <!-- Pager -->
-        <!--
-        <div class="clearfix">
-          <a class="btn btn-primary float-right" href="{{"/playlists" | relative_url }}">View All Playlists &rarr;</a>
-        </div>
-        -->
 
       </div>
     </div>
