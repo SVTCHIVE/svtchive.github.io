@@ -1,6 +1,6 @@
 # DAY6 Quick Playlists
 데이식스 퀵 플레이리스
-by [데이식스 음원자료 (@DAY6MusicData)](
+by [데이식스 음원자료 (@DAY6MusicData)](https://twitter.com/day6musicdata)
 
 ## 플레이리스트 담기
 5가지 음원 사이트 버튼을 통해 곧바로 해당 음원 사이트 전용 플레이리스트를 생성합니다.
