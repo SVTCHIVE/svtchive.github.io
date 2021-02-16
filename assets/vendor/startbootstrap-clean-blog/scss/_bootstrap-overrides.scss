@@ -43,16 +43,13 @@
   margin: 2px;
   padding: 5px;
   text-align: center;
-  text-transform: uppercase;
   transition: 1s;
-  background-size: 200% auto;
-  color: #333;
-  text-shadow: 0px 0px 10px rgba(0,0,0,0.2);
-  box-shadow: 0 3px 15px #eee;
+  background-size: 400% 400%;
+  color: #222;
   border-radius: 50px;
   text-decoration: none;
   border: 1px solid #888;
-  background-size: 400% 400%;
+  box-shadow: 0 0px 5px #f6f6f6;
  }
 
 .s_btn:hover {
@@ -61,6 +58,7 @@
   color: white;
   box-shadow: 0 5px 20px #bbb;
   border: 1px solid #fff;
+  text-shadow: 0px 0px 10px rgba(0,0,0,0.2);
 }
 
 .s_btn-1 {
@@ -100,7 +98,6 @@
   margin: 2px;
   padding: 5px;
   text-align: center;
-  text-transform: uppercase;
   transition: 1s;
   background-size: 200% auto;
   color: white;
@@ -153,12 +150,11 @@
   margin: 2px;
   padding: 10px;
   text-align: center;
-  text-transform: uppercase;
   transition: 0.5s;
   background-size: 200% auto;
   color: white;
   text-shadow: 0px 0px 10px rgba(0,0,0,0.2);
-  box-shadow: 0 5px 20px #777;
+  box-shadow: 0 5px 15px #555;
   border-radius: 50px;
   text-decoration: none;
  }
@@ -166,7 +162,7 @@
  .m_btn:hover {
    text-decoration: none;
    color: white;
-   box-shadow: 0 5px 20px #bbb;
+   box-shadow: 0 5px 20px #999;
  }
 
  .m_btn-1 {
