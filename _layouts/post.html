@@ -44,7 +44,7 @@ layout: default
         var url_default_naver = "http://share.naver.com/web/shareView.nhn?url=";
         var title_default_naver = "&title=";
         var url_this_page = location.href;
-        var title_this_page = page.title;
+        var title_this_page = document.title;
         var url_combine_ks = url_default_ks + url_this_page;
         var url_combine_fb = url_default_fb + url_this_page;
         var url_combine_tw = url_default_tw_txt +"데이식스를 추천합니다! · " + title_this_page + " %23데이식스 %23퀵플레이리스트" + url_default_tw_url + url_this_page;
