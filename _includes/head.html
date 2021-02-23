@@ -10,12 +10,10 @@
 
   <!-- meta tag -->
   <meta property="og:image" content="https://day6.kr/img/meta/meta-tag-img.png">
-  <meta property="og:description" content="순식간에 당신의 재생목록에">
+  <meta property="og:description" content="{% if page.title %}데이식스 퀵 플레이리스트{% else %}순식간에 당신의 재생목록에{% endif %}">
 
   <!-- twitter meta tag -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:site" content="@DAY6MusicData">
-  <meta name="twitter:creator" content="@DAY6MusicData">
   <meta name="twitter:title" content="{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}">
   <meta name="twitter:description" content="{% if page.title %}데이식스 퀵 플레이리스트{% else %}순식간에 당신의 재생목록에{% endif %}">
   <meta name="twitter:image" content="https://day6.kr/img/meta/tw-meta-tag-img.png">
