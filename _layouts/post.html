@@ -51,75 +51,11 @@ layout: default
         Kakao.init('9a710827ef26f52fea6c3ac8f62e912d');
 
         console.log(Kakao.isInitialized());
-/*
-        Kakao.Link.createDefaultButton({
-          container: '#kakao-link-btn',
-          objectType: 'feed',
-          content: {
-            title: title_this_page,
-            description: '세상에서 가장 빠른 데이식스 음악 담기, 바로 여기서!',
-            imageUrl: 'https://day6.kr/img/socialmedia/banner-kakao.png',
-            link: {
-              mobileWebUrl: url_this_page,
-              webUrl: url_this_page
-            }
-          },
-          social: {
-            likeCount: 2015,
-            commentCount: 09,
-            sharedCount: 07
-          },
-          buttons: {
-            title: '담으러 가기',
-            link: {
-              mobileWebUrl: url_this_page,
-              webUrl: url_this_page
-            }
-          }
-        });
-*/
-        Kakao.Link.createDefaultButton({
-              container: '#kakao-link-btn',
-              objectType: 'feed',
-              content: {
-                title: '딸기 치즈 케익',
-                description: '#케익 #딸기 #삼평동 #카페 #분위기 #소개팅',
-                imageUrl: 'http://mud-kage.kakao.co.kr/dn/Q2iNx/btqgeRgV54P/VLdBs9cvyn8BJXB3o7N8UK/kakaolink40_original.png',
-                link: {
-                  mobileWebUrl: 'https://developers.kakao.com',
-                  webUrl: 'https://developers.kakao.com'
-                }
-              },
-              social: {
-                likeCount: 286,
-                commentCount: 45,
-                sharedCount: 845
-              },
-              buttons: [
-                {
-                  title: '웹으로 보기',
-                  link: {
-                    mobileWebUrl: 'https://developers.kakao.com',
-                    webUrl: 'https://developers.kakao.com'
-                  }
-                },
-                {
-                  title: '앱으로 보기',
-                  link: {
-                    mobileWebUrl: 'https://developers.kakao.com',
-                    webUrl: 'https://developers.kakao.com'
-                  }
-                }
-              ]
-            });
-          //]]>
+
         </script>
 
         <!-- Social Media share buttons -->
         <div style="width: 100%; text-align: center; margin-bottom: 24px;">
-        <!-- kakaotalk share button -->
-        <a id="kakao-link-btn" href="javascript:;">
-        <img src="/img/socialmedia/kakaotalk.gif" title="카카오톡으로 공유하기" class="sharebtn_custom" style="width: 48px; height: 48px; border-radius: 30px;"></a>
         <!-- Facebook share button -->
         <a href="" onclick="window.open(url_combine_fb, '', 'scrollbars=no, width=600, height=600'); return false;">
         <img src="/img/socialmedia/facebook.gif" title="페이스북으로 공유하기" class="sharebtn_custom" style="width: 48px; height: 48px; border-radius: 30px;"></a>
