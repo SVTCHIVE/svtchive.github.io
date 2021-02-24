@@ -34,8 +34,6 @@ layout: default
         <hr>
 
         <!-- Social media share websites -->
-
-        <!-- SNS share websites -->
         <script type="text/javascript" async>
         var url_default_ks = "https://story.kakao.com/share?url=";
         var url_default_fb = "https://www.facebook.com/sharer/sharer.php?u=";
@@ -50,20 +48,43 @@ layout: default
         var url_combine_tw = url_default_tw_txt + title_this_page + " %23데이식스 %23퀵플레이리스트" + url_default_tw_url + url_this_page;
         var url_combine_naver = url_default_naver + encodeURI(url_this_page) + title_default_naver + encodeURI(title_this_page);
 
-        function sendLinkCustom() {
-            Kakao.init("[9a710827ef26f52fea6c3ac8f62e912d]");
-            Kakao.Link.sendCustom({
-                templateId: [48196]
-            });
-        }
+        //<![CDATA[
+        // // 사용할 앱의 JavaScript 키를 설정해 주세요.
+        Kakao.init('9a710827ef26f52fea6c3ac8f62e912d');
+        // // 카카오링크 버튼을 생성합니다. 처음 한번만 호출하면 됩니다.
+        Kakao.Link.createDefaultButton({
+          container: '#kakao-link-btn',
+          objectType: 'feed',
+          content: {
+            title: title_this_page,
+            description: '세상에서 가장 빠른 데이식스 음악 담기, 바로 여기서!',
+            imageUrl: 'https://day6.kr/img/socialmedia/banner-kakao.png',
+            link: {
+              mobileWebUrl: url_this_page,
+              webUrl: url_this_page
+            }
+          },
+          social: {
+            likeCount: 2015,
+            commentCount: 09,
+            sharedCount: 07
+          },
+          buttons: {
+            title: '담으러 가기',
+            link: {
+              mobileWebUrl: url_this_page,
+              webUrl: url_this_page
+            }
+          },
+        });
+          //]]>
         </script>
-
 
         <!-- Social Media share buttons -->
         <div style="width: 100%; text-align: center; margin-bottom: 24px;">
-        <!-- kakaotalk share button
-        <a href="" onclick="sendLinkCustom();">
-        <img src="/img/socialmedia/kakaotalk.gif" title="카카오톡으로 공유하기" class="sharebtn_custom" style="width: 48px; height: 48px; border-radius: 30px;"></a> -->
+        <!-- kakaotalk share button -->
+        <a href="javascript:Kakao.Link.createDefaultButton(DefaultButtonSettings);">
+        <img src="/img/socialmedia/kakaotalk.gif" title="카카오톡으로 공유하기" class="sharebtn_custom" style="width: 48px; height: 48px; border-radius: 30px;"></a>
         <!-- Facebook share button -->
         <a href="" onclick="window.open(url_combine_fb, '', 'scrollbars=no, width=600, height=600'); return false;">
         <img src="/img/socialmedia/facebook.gif" title="페이스북으로 공유하기" class="sharebtn_custom" style="width: 48px; height: 48px; border-radius: 30px;"></a>
