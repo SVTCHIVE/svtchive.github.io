@@ -18,14 +18,18 @@
   </title>
 
   <!-- meta tag -->
-  <meta property="og:image" content="https://day6.kr/img/meta/meta-tag-img.png">
-  <meta property="og:description" content="{% if page.title %}데이식스 퀵 플레이리스트{% else %}순식간에 당신의 재생목록에{% endif %}">
+  <meta property="og:image:width" content="1193">
+  <meta property="og:image:height" content="625">
+  <meta property="og:title" content="{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}">
+  <meta property="og:description" content="세상에서 가장 빠른 데이식스 음악 추천 사이트 day6.kr🚀에서 순식간에 데이식스의 음악을 담아보세요!">
+  <meta property="og:url" content="https://day6.kr">
+  <meta property="og:image" content="https://day6.kr/img/meta/og-image.jpg">
 
   <!-- twitter meta tag -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}">
-  <meta name="twitter:description" content="{% if page.title %}데이식스 퀵 플레이리스트{% else %}순식간에 당신의 재생목록에{% endif %}">
-  <meta name="twitter:image" content="https://day6.kr/img/meta/tw-meta-tag-img.png">
+  <meta name="twitter:description" content="세상에서 가장 빠른 데이식스 음악 추천 사이트 day6.kr🚀에서 순식간에 데이식스의 음악을 담아보세요!">
+  <meta name="twitter:image" content="https://day6.kr/img/meta/og-image.jpg">
 
 
 
