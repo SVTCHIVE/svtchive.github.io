@@ -60,6 +60,7 @@
   border: 1px solid transparent;
   text-shadow: 0px 0px 10px rgba(0,0,0,0.2);
 }
+.s_btn:focus { outline: none; }
 
 .s_btn-1 {
   background-image: linear-gradient(to right, #fff 0%, #fff 25%, #4ce8b3 51%, #24d792 75%, #19af37 100%);
@@ -113,6 +114,8 @@
   color: white;
   box-shadow: 0 5px 20px #bbb;
 }
+
+.p_btn:focus { outline: none; }
 
 .p_btn-1 {
   background-image: linear-gradient(to right, #000e73 0%, #314cb3 51%, #7d49a7 100%);
