@@ -112,7 +112,6 @@ function musicsite(site, theme) {
     position: 'top',
     showConfirmButton: false,
     timer: 2500,
-    timerProgressBar: false,
     didOpen: (toast) => {
       toast.addEventListener('mouseenter', Swal.stopTimer)
       toast.addEventListener('mouseleave', Swal.resumeTimer)
