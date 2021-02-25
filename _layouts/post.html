@@ -37,9 +37,6 @@ layout: default
 
         <!-- Social Media share buttons -->
         <div style="width: 100%; text-align: center; margin-bottom: 24px;">
-        <!-- Clipboard button -->
-        <a href="#none" id="btnCopyUrl" data-clipboard-action="copy">
-        <img src="/img/socialmedia/clipboard.gif" title="클립보드에 복사하기" style="width: 48px; height: 48px; border-radius: 30px;"></a>
         <!-- Facebook share button -->
         <a href="" onclick="window.open(url_combine_fb, '', 'scrollbars=no, width=600, height=600'); return false;">
         <img src="/img/socialmedia/facebook.gif" title="페이스북으로 공유하기" class="sharebtn_custom" style="width: 48px; height: 48px; border-radius: 30px;"></a>
@@ -51,34 +48,6 @@ layout: default
         <img src="/img/socialmedia/naver.gif" title="네이버로 공유하기" class="sharebtn_custom" style="width: 48px; height: 48px; border-radius: 30px;"></a>
         </div>
 
-        <!-- clipboard -->
-        <script type="text/javascript" async>
-          var icon_cl = ["error", "success"];
-          var title_cl = ["복사 실패😥", "복사 성공😊"];
-          var ok_cl = 0;
-          $(function ({
-              // 복사 버튼을 만들시 data-clipboard-text 안에 복사할 문구를 넣어준다
-              $('#btnCopyUrl').attr('data-clipboard-text', document.location.href);
-              // callback 설정
-              var clipboard = new Clipboard('#btnCopyUrl');
-              clipboard.on('success', function(e) {
-                  ok_cl = 1;
-              });
-              clipboard.on('error', function(e) {
-                  ok_cl = 0;
-              });
-          });
-          const Toast = Swal.mixin({
-            toast: true,
-            position: 'top',
-            showConfirmButton: false,
-            timer: 1500,
-            didOpen: (toast) => {
-              toast.addEventListener('mouseenter', Swal.stopTimer)
-              toast.addEventListener('mouseleave', Swal.resumeTimer)
-            }
-          })
-        </script>
         <!-- Social media share websites -->
         <script type="text/javascript" async>
         var url_default_fb = "https://www.facebook.com/sharer/sharer.php?u=";
