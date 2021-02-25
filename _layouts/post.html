@@ -33,29 +33,11 @@ layout: default
 
         <hr>
 
-        <!-- Social media share websites -->
-        <script type="text/javascript" async>
-        var url_default_ks = "https://story.kakao.com/share?url=";
-        var url_default_fb = "https://www.facebook.com/sharer/sharer.php?u=";
-        var url_default_tw_txt = "https://twitter.com/intent/tweet?text=";
-        var url_default_tw_url = "&url=";
-        var url_default_naver = "http://share.naver.com/web/shareView.nhn?url=";
-        var title_default_naver = "&title=";
-        var url_this_page = location.href;
-        var title_this_page = document.title;
-        var url_combine_ks = url_default_ks + url_this_page;
-        var url_combine_fb = url_default_fb + url_this_page;
-        var url_combine_tw = url_default_tw_txt + title_this_page + " %23데이식스 %23퀵플레이리스트" + url_default_tw_url + url_this_page;
-        var url_combine_naver = url_default_naver + encodeURI(url_this_page) + title_default_naver + encodeURI(title_this_page);
-
-        Kakao.init('9a710827ef26f52fea6c3ac8f62e912d');
-
-        console.log(Kakao.isInitialized());
-
-        </script>
-
         <!-- Social Media share buttons -->
         <div style="width: 100%; text-align: center; margin-bottom: 24px;">
+        <!-- Clipboard button -->
+        <p class="btn" data-clipboard-text=url_this_page>
+        <img src="/img/socialmedia/clipboard.gif" title="클립보드에 복사하기" class="sharebtn_custom" style="width: 48px; height: 48px; border-radius: 30px;"></p>
         <!-- Facebook share button -->
         <a href="" onclick="window.open(url_combine_fb, '', 'scrollbars=no, width=600, height=600'); return false;">
         <img src="/img/socialmedia/facebook.gif" title="페이스북으로 공유하기" class="sharebtn_custom" style="width: 48px; height: 48px; border-radius: 30px;"></a>
@@ -65,9 +47,54 @@ layout: default
         <!-- Naver share button -->
         <a href="" onclick="window.open(url_combine_naver, '', 'scrollbars=no, width=600, height=600'); return false;">
         <img src="/img/socialmedia/naver.gif" title="네이버로 공유하기" class="sharebtn_custom" style="width: 48px; height: 48px; border-radius: 30px;"></a>
-
         </div>
 
+        <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js" async></script>
+
+        <script type="text/text/javascript" async>
+          var icon_cl = ["error", "success"];
+          var title_cl = ["복사 실패😥", "복사 성공😊"];
+          var ok_cl = 0;
+          var clipboard = new ClipboardJS( '.clipboard-btn' );  // 클래스의 값이 btn인 요소를 복사
+          clipboard.on( 'success', function() {       // 복사에 성공했을 때
+            ok_cl = 1;
+          } );
+          clipboard.on( 'error', function() {         // 복사에 실패했을 때
+            ok_cl = 0;
+          } );
+          const Toast = Swal.mixin({
+            toast: true,
+            position: 'top',
+            showConfirmButton: false,
+            timer: 1500,
+            didOpen: (toast) => {
+              toast.addEventListener('mouseenter', Swal.stopTimer)
+              toast.addEventListener('mouseleave', Swal.resumeTimer)
+            }
+          })
+          Toast.fire({
+            icon: icon_cl[ok_cl],
+            title: title_cl[ok_cl]
+          })
+        </script>
+
+        <!-- clipboard -->
+        <script
+
+
+        <!-- Social media share websites -->
+        <script type="text/javascript" async>
+        var url_default_fb = "https://www.facebook.com/sharer/sharer.php?u=";
+        var url_default_tw_txt = "https://twitter.com/intent/tweet?text=";
+        var url_default_tw_url = "&url=";
+        var url_default_naver = "http://share.naver.com/web/shareView.nhn?url=";
+        var title_default_naver = "&title=";
+        var url_this_page = location.href;
+        var title_this_page = document.title;
+        var url_combine_fb = url_default_fb + url_this_page;
+        var url_combine_tw = url_default_tw_txt + title_this_page + " %23데이식스 %23퀵플레이리스트" + url_default_tw_url + url_this_page;
+        var url_combine_naver = url_default_naver + encodeURI(url_this_page) + title_default_naver + encodeURI(title_this_page);
+        </script>
 
         <div class="clearfix">
 
