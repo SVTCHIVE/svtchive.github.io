@@ -36,7 +36,7 @@ layout: default
         <!-- Social Media share buttons -->
         <div style="width: 100%; text-align: center; margin-bottom: 24px;">
         <!-- Clipboard button -->
-        <a href="#none" class="clipboard-btn" data-clipboard-text=location.href>
+        <a href="#none" id="btnCopyUrl" data-clipboard-action="copy">
         <img src="/img/socialmedia/clipboard.gif" title="클립보드에 복사하기" class="sharebtn_custom" style="width: 48px; height: 48px; border-radius: 30px;"></a>
         <!-- Facebook share button -->
         <a href="" onclick="window.open(url_combine_fb, '', 'scrollbars=no, width=600, height=600'); return false;">
@@ -55,13 +55,18 @@ layout: default
           var icon_cl = ["error", "success"];
           var title_cl = ["복사 실패😥", "복사 성공😊"];
           var ok_cl = 0;
-          var clipboard = new ClipboardJS( '.clipboard-btn' );  // 클래스의 값이 btn인 요소를 복사
-          clipboard.on( 'success', function() {       // 복사에 성공했을 때
-            ok_cl = 1;
-          } );
-          clipboard.on( 'error', function() {         // 복사에 실패했을 때
-            ok_cl = 0;
-          } );
+          $(function ({
+              // 복사 버튼을 만들시 data-clipboard-text 안에 복사할 문구를 넣어준다
+              $('#btnCopyUrl').attr('data-clipboard-text', document.location.href);
+              // callback 설정
+              var clipboard = new Clipboard('#btnCopyUrl');
+              clipboard.on('success', function(e) {
+                  ok_cl = 1;
+              });
+              clipboard.on('error', function(e) {
+                  ok_cl = 0;
+              });
+          });
           const Toast = Swal.mixin({
             toast: true,
             position: 'top',
@@ -71,10 +76,6 @@ layout: default
               toast.addEventListener('mouseenter', Swal.stopTimer)
               toast.addEventListener('mouseleave', Swal.resumeTimer)
             }
-          })
-          Toast.fire({
-            icon: icon_cl[ok_cl],
-            title: title_cl[ok_cl]
           })
         </script>
         <!-- Social media share websites -->
