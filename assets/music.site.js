@@ -7,10 +7,14 @@ function musicsite(site, theme) {
   // one-click link
   var melon = "melonapp://play/?ctype=1&menuid=0&cid=";
   var melon_ipad = "melonipad://play/?ctype=1&menuid=0&cid=";
+  var melon_win = "melonapp://play?cType=1&cList=";
+  var melon_mac = "melonplayer://play?ref=&cid=";
   var genie_iphone = "ktolleh00167://landing/?landing_type=31&landing_target=";
   var genie_android = "cromegenie://scan/?landing_type=31&landing_target=";
   var genie_web = "https://www.genie.co.kr/player/shareProcessV2?xgnm=";
   var bugs = "bugs3://app/tracks/lists?title=전체듣기&miniplay=Y&track_ids=";
+  var bugs_mac_1 = "bugs3://app/tracks/";
+  var bugs_mac_2 = "?autoplay=Y";
   var vibe = "vibe://listen?version=3&trackIds=";
 
   // song-id
@@ -104,8 +108,8 @@ function musicsite(site, theme) {
   var icon = ["error", "success"];
   var title = ["지원하지 않는 디바이스예요.😥", "좋았어요!🎉"];
 
-  if ( ( mobile && site < 5 ) || site == 2) ok = 1;
-  else ok = 0;
+  if ( ( mobile && site < 5 ) || site < 3) ok = 1; // 사이트 판
+  else ok = 0; // 0일 경우 미지원 1일 경우 지원
 
   const Toast = Swal.mixin({
     toast: true,
@@ -149,5 +153,11 @@ function musicsite(site, theme) {
     }
   }
   else
-    if(site == 2) window.open( genie_web + genie_songid[theme], '', 'scrollbars=no, width=600, height=600');
+    if(site == 1){
+      if (userAgent.search("macintosh") > -1) music_site_url = melon_mac + melon_songid[theme];
+      else music_site_url = melon_win + melon_songid[theme];
+    }
+    else if(site == 2) window.open( genie_web + genie_songid[theme], '', 'scrollbars=no, width=600, height=600');
+    if(site == 1) location.href = music_site_url;
+
 }
