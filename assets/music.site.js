@@ -8,7 +8,8 @@ function musicsite(site, theme) {
   var melon = "melonapp://play/?ctype=1&menuid=0&cid=";
   var melon_ipad = "melonipad://play/?ctype=1&menuid=0&cid=";
   var melon_win = "melonapp://play?cType=1&cList=";
-  var melon_mac = "melonplayer://play?ref=&cid=";
+  var melon_mac_1 = "melonplayer://play?ref=&cid=";
+  var melon_mac_2 = "&cflag=1";
   var genie_iphone = "ktolleh00167://landing/?landing_type=31&landing_target=";
   var genie_android = "cromegenie://scan/?landing_type=31&landing_target=";
   var genie_web = "https://www.genie.co.kr/player/shareProcessV2?xgnm=";
@@ -154,7 +155,7 @@ function musicsite(site, theme) {
   }
   else
     if(site == 1){
-      if (userAgent.search("macintosh") > -1) music_site_url = melon_mac + melon_songid[theme];
+      if (userAgent.search("macintosh") > -1) music_site_url = melon_mac_1 + melon_songid[theme] + melon_mac_2;
       else music_site_url = melon_win + melon_songid[theme];
     }
     else if(site == 2) window.open( genie_web + genie_songid[theme], '', 'scrollbars=no, width=600, height=600');
