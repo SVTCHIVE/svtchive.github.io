@@ -4,6 +4,7 @@ description:        순식간에 당신의 재생목록으로
 author:             데이식스 음원자료
 baseurl:            ""
 url:                "https://day6.kr"
+enforce_ssl:        "www.day6.kr"
 
 # Social Profiles
 twitter_username:   DAY6MusicData
