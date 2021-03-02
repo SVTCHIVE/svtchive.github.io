@@ -1,6 +1,6 @@
 {
-    "name": "",
-    "short_name": "",
+    "name": "\ub370\uc774\uc2dd\uc2a4 \ud50c\ub808\uc774",
+    "short_name": "\ub370\uc774\uc2dd\uc2a4 \ud50c\ub808\uc774",
     "icons": [
         {
             "src": "/assets/icons/android-chrome-192x192.png",
@@ -13,7 +13,7 @@
             "type": "image/png"
         }
     ],
-    "theme_color": "#ffb28c",
-    "background_color": "#ffb28c",
+    "theme_color": "#ffffff",
+    "background_color": "#ffffff",
     "display": "standalone"
 }
