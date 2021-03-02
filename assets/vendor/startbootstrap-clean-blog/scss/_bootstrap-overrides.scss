@@ -194,13 +194,10 @@
   text-decoration: none !important;
   border: 0;
   outline: 0;
-}
-
-.banner_btn:hover {
-  background-position: right  center;
-  text-decoration: none;
-  color: white;
-  box-shadow: 0 3px 5px #ccc;
+  -webkit-animation: animatedgradient 6s ease infinite;
+  -moz-animation: animatedgradient 6s ease infinite;
+  -o-animation: animatedgradient 6s ease infinite;
+  animation: animatedgradient 6s ease infinite;
 }
 
 .banner_btn:focus { outline: none; }
@@ -220,20 +217,15 @@
   background-size: 400% 400%;
 }
 
--webkit-animation:animatedgradient 6s ease infinite;
--moz-animation: animatedgradient 6s ease infinite;
--o-animation: animatedgradient 6s ease infinite;
-animation: animatedgradient 6s ease infinite;
-
 @-webkit-keyframes animatedgradient {
-  0%{background-position:0% 50%}
-  50%{background-position:100% 50%}
-  100%{background-position:0% 50%}
+  0% {background-position:0% 50%}
+  50% {background-position:100% 50%}
+  100% {background-position:0% 50%}
 }
 @-moz-keyframes animatedgradient {
-  0%{background-position:0% 50%}
-  50%{background-position:100% 50%}
-  100%{background-position:0% 50%}
+  0% {background-position:0% 50%}
+  50% {background-position:100% 50%}
+  100% {background-position:0% 50%}
 }
 @-o-keyframes animatedgradient {
   0% {background-position:0% 50%}
@@ -241,13 +233,7 @@ animation: animatedgradient 6s ease infinite;
   100% {background-position:0% 50%}
 }
 @keyframes animatedgradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
+	0% {background-position: 0% 50%;}
+	50% {background-position: 100% 50%;}
+	100% {background-position: 0% 50%;}
 }
