@@ -1,4 +1,7 @@
 function musicsite(site, theme) {
+  // device test
+  var mobile = (/iphone|ipad|ipod|android/i.test(navigator.userAgent.toLowerCase()));
+  var userAgent = navigator.userAgent.toLowerCase();
 
   // one-click link
   var melon = "melonapp://play/?ctype=1&menuid=0&cid=";
@@ -13,6 +16,7 @@ function musicsite(site, theme) {
   var bugs_mac_1 = "bugs3://app/tracks/";
   var bugs_mac_2 = "?autoplay=Y";
   var vibe = "vibe://listen?version=3&trackIds=";
+  var music_site_url;
 
   // song-id
   var melon_songid = new Array();
@@ -122,21 +126,16 @@ function musicsite(site, theme) {
   // melon : 1 // genie : 2 // bugs : 3 // vibe : 4 // flo : 5
   // site = a / theme = b
 
-  // device
-  var mobile = (/iphone|ipad|ipod|android/i.test(navigator.userAgent.toLowerCase()));
-  var userAgent = navigator.userAgent.toLowerCase();
-  var music_site_url;
-
   var ok = 0;
   var icon = ["error", "success"];
-  var title = ["지원하지 않는 디바이스예요.😥", "좋았어요!🎉"];
-  
-  if ( ( mobile && site < 5 ) || site < 3) ok = 1; // 사이트 판
-  else ok = 0; // 0일 경우 미지원 1일 경우 지원
+  var title = ["지원하지 않는 디바이스예요.😥", "플레이리스트 생성 완료!🎉"];
+
+  if ( mobile || ( navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1 ) || site < 3 ) ok = 1; // site test
+  else ok = 0;
 
   const Toast = Swal.mixin({
     toast: true,
-    position: 'top',
+    position: 'top-end',
     showConfirmButton: false,
     timer: 2500,
     didOpen: (toast) => {
@@ -149,10 +148,10 @@ function musicsite(site, theme) {
     title: title[ok]
   })
 
-  if (mobile){
+  if ( mobile || ( navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1 ) ){
     // site 1 - 4 case
     if(site == 1){
-      if (userAgent.search("ipad") > -1) music_site_url = melon_ipad + melon_songid[theme];
+      if (userAgent.search("ipad") > -1 || navigator.platform === 'MacIntel') music_site_url = melon_ipad + melon_songid[theme];
       else music_site_url = melon + melon_songid[theme];
     }
     else if(site == 2){
@@ -175,12 +174,12 @@ function musicsite(site, theme) {
       })
     }
   }
-  else
+  else{
     if(site == 1){
       if (userAgent.search("macintosh") > -1) music_site_url = melon_mac_1 + melon_songid[theme] + melon_mac_2;
       else music_site_url = melon_win + melon_songid[theme];
     }
     else if(site == 2) window.open( genie_web + genie_songid[theme], '', 'scrollbars=no, width=600, height=600');
     if(site == 1) location.href = music_site_url;
-
+  }
 }
