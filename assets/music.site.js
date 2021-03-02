@@ -1,9 +1,5 @@
 function musicsite(site, theme) {
 
-  // device
-  var mobile = (/iphone|ipad|ipod|android/i.test(navigator.userAgent.toLowerCase()));
-  var userAgent = navigator.userAgent.toLowerCase();
-
   // one-click link
   var melon = "melonapp://play/?ctype=1&menuid=0&cid=";
   var melon_ipad = "melonipad://play/?ctype=1&menuid=0&cid=";
@@ -126,7 +122,12 @@ function musicsite(site, theme) {
   // melon : 1 // genie : 2 // bugs : 3 // vibe : 4 // flo : 5
   // site = a / theme = b
 
+  // device
+  var mobile = (/iphone|ipad|ipod|android/i.test(navigator.userAgent.toLowerCase()));
+  var userAgent = navigator.userAgent.toLowerCase();
   var music_site_url;
+  
+  if(Navigator.maxTouchPoints == 5 && navigator.userAgent.toLowerCase() == "macintosh") userAgent = "ipad";
 
   var ok = 0;
   var icon = ["error", "success"];
