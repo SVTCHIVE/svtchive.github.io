@@ -126,16 +126,17 @@ function musicsite(site, theme) {
   var mobile = (/iphone|ipad|ipod|android/i.test(navigator.userAgent.toLowerCase()));
   var userAgent = navigator.userAgent.toLowerCase();
   var music_site_url;
-  
-  if(Navigator.maxTouchPoints == 5 && userAgent.search("macintosh") > -1 ){
-    userAgent[1] = "ipad";
-    mobile = 1;
-  }
 
   var ok = 0;
   var icon = ["error", "success"];
   var title = ["지원하지 않는 디바이스예요.😥", "좋았어요!🎉"];
 
+    
+  if(Navigator.maxTouchPoints && userAgent.search("macintosh") > -1 ){
+    userAgent[1] = "ipad";
+    mobile = 1;
+  }
+  
   if ( ( mobile && site < 5 ) || site < 3) ok = 1; // 사이트 판
   else ok = 0; // 0일 경우 미지원 1일 경우 지원
 
