@@ -128,7 +128,7 @@ function musicsite(site, theme) {
   var music_site_url;
   
   if(Navigator.maxTouchPoints == 5 && userAget.search("macintosh") > -1 ){
-    userAgent = "ipad";
+    userAgent[0] = "ipad";
     mobile = true;
   }
 
