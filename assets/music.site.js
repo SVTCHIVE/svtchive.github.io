@@ -127,7 +127,7 @@ function musicsite(site, theme) {
   var userAgent = navigator.userAgent.toLowerCase();
   var music_site_url;
   
-  if(Navigator.maxTouchPoints == 5 && navigator.userAgent.toLowerCase() == "macintosh") userAgent = "ipad";
+  if(Navigator.maxTouchPoints == 5 && userAget.search("macintosh") > -1 ) userAgent = "ipad";
 
   var ok = 0;
   var icon = ["error", "success"];
