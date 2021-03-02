@@ -123,7 +123,7 @@ function musicsite(site, theme) {
   // site = a / theme = b
 
   // device
-  var mobile = (/iphone|ipad|ipod|android|macintosh/i.test(navigator.userAgent.toLowerCase()));
+  var mobile = (/iphone|ipad|ipod|android/i.test(navigator.userAgent.toLowerCase()));
   var userAgent = navigator.userAgent.toLowerCase();
   var music_site_url;
 
@@ -131,7 +131,7 @@ function musicsite(site, theme) {
   var icon = ["error", "success"];
   var title = ["지원하지 않는 디바이스예요.😥", "좋았어요!🎉"];
   
-  if ( ( mobile && Navigator.maxTouchPoints && site < 5 ) || site < 3) ok = 1; // 사이트 판
+  if ( ( mobile && site < 5 ) || site < 3) ok = 1; // 사이트 판
   else ok = 0; // 0일 경우 미지원 1일 경우 지원
 
   const Toast = Swal.mixin({
@@ -149,10 +149,10 @@ function musicsite(site, theme) {
     title: title[ok]
   })
 
-  if (mobile && Navigator.maxTouchPoints){
+  if (mobile){
     // site 1 - 4 case
     if(site == 1){
-      if (userAgent.search("ipad") > -1 && userAgent.search("macintosh") > -1) music_site_url = melon_ipad + melon_songid[theme];
+      if (userAgent.search("ipad") > -1) music_site_url = melon_ipad + melon_songid[theme];
       else music_site_url = melon + melon_songid[theme];
     }
     else if(site == 2){
