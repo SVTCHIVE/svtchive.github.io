@@ -18,6 +18,9 @@ function musicsite(site, theme) {
   var vibe = "vibe://listen?version=3&trackIds=";
   var music_site_url;
 
+  var guide_site = new Array();
+  var msg = new Array();
+
   // song-id
   var melon_songid = new Array();
   var genie_songid = new Array();
@@ -123,12 +126,22 @@ function musicsite(site, theme) {
   vibe_songid[14] = "16035923,40319206,30184811,16081363,22886295,20121084,27852482,20121086,23177552,17836615,17736000,27852477,27852480,6049322,41909366,43626549,41909365,23177562,20121097";
   flo_image[14] = "/playlist/winter.gif";
 
+  melon_songid[51] = "30189030,32586849,32115585,30232719,31431163,30772000,31927279,30771999,31481700,30457472,30399494,31927274,31927278,8120284,32892360,33116872,32892358,31481704,30772011";
+  genie_songid[51] = "86866729;90194897;89472169;86931930;88389337;87591823;89220631;87591822;88455413;87185619;87121534;89220626;89220630;86112660;90756157;91565584;90756155;88455417;87591834";
+  bugs_songid[51] = "30511021|31908734|31729002|30540153|31318643|30872543|31650953|30872542|31360122|30677528|30646155|31650948|31650952|30203512|32006769|6029882|32006767|31360126|30872554";
+  vibe_songid[51] = "16035923,40319206,30184811,16081363,22886295,20121084,27852482,20121086,23177552,17836615,17736000,27852477,27852480,6049322,41909366,43626549,41909365,23177562,20121097";
+  flo_image[51] = "/playlist/winter.gif";
+
   // melon : 1 // genie : 2 // bugs : 3 // vibe : 4 // flo : 5
   // site = a / theme = b
 
   var ok = 0;
   var icon = ["error", "success"];
   var title = ["지원하지 않는 디바이스예요.😥", "플레이리스트 생성 완료!🎉"];
+
+  var guide_link = ["", "/guide#멜론-스트리밍-가이드", "/guide#지니-스트리밍-가이드", "/guide#벅스-스트리밍-가이드", "/guide#바이브-스트리밍-가이드", "/guide#플로-스트리밍-가이드"];
+  var button_color_confirm = ["#aaa", "#3085d6"];
+  var button_color_deny = ["#3085d6", "#aaa"];
 
   if ( mobile || ( navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1 ) || site < 3 ) ok = 1; // site test
   else ok = 0;
@@ -150,18 +163,18 @@ function musicsite(site, theme) {
 
   if ( mobile || ( navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1 ) ){
     // site 1 - 4 case
-    if(site == 1){
+    if(site == 1 || site == 6){
       if (userAgent.search("ipad") > -1 || navigator.platform === 'MacIntel') music_site_url = melon_ipad + melon_songid[theme];
       else music_site_url = melon + melon_songid[theme];
     }
-    else if(site == 2){
+    else if(site == 2 || site == 7){
       if(userAgent.search("android") > -1) music_site_url = genie_android + genie_songid[theme];
       else music_site_url = genie_iphone + genie_songid[theme];
     }
-    else if(site == 3) music_site_url = bugs + bugs_songid[theme];
-    else if(site == 4) music_site_url = vibe + vibe_songid[theme];
+    else if(site == 3 || site == 8) music_site_url = bugs + bugs_songid[theme];
+    else if(site == 4 || site == 9) music_site_url = vibe + vibe_songid[theme];
     if(site < 5)  location.href = music_site_url;
-    else{
+    else if (site == 5){
       Swal.fire({
         icon: 'success',
         title: '생성 완료!🎉',
@@ -169,17 +182,100 @@ function musicsite(site, theme) {
         imageUrl: flo_image[theme],
         imageHeight: 700,
         imageAlt: 'Playlist image',
-        confirmButtonText: '알겠어요!',
+        confirmButtonText: '알겠어요',
         footer: '<a href="/intro#플로-플레이리스트-이용-방법" style="color:#28acff">어떻게 플레이리스트를 만드나요?</a>'
+      });
+    }
+    if (site > 5 && site < 10){
+      Swal.fire({
+        icon: 'success',
+        title: '생성 완료!🎉',
+        text: '혹시 스트리밍 가이드를 확인하셨나요? 아직 확인하지 않으셨다면 가이드를 먼저 확인해주세요!🍋',
+        showDenyButton: true,
+        focusConfirm: false,
+        focusDeny: true,
+        confirmButtonText: '바로 담기',
+        denyButtonText: '가이드 보기',
+        confirmButtonColor: '#aab7c1',
+        denyButtonColor: '#3085d6',
+      }).then((result) => {
+        if (result.isConfirmed) {
+          location.href = music_site_url;
+        } else if (result.isDenied) {
+          location.href = guide_link[site-5];
+        }
+      })
+    }
+    else if (site == 10){
+      Swal.fire({
+        icon: 'success',
+        title: '생성 완료!🎉',
+        text: '혹시 스트리밍 가이드를 확인하셨나요? 아직 확인하지 않으셨다면 가이드를 먼저 확인해주세요!🍋',
+        imageUrl: flo_image[theme],
+        imageHeight: 700,
+        imageAlt: 'Playlist image',
+        showDenyButton: true,
+        focusConfirm: false,
+        focusDeny: true,
+        confirmButtonText: '괜찮아요',
+        denyButtonText: '가이드 보기',
+        confirmButtonColor: '#aab7c1',
+        denyButtonColor: '#3085d6',
+        footer: '<a href="/intro#플로-플레이리스트-이용-방법" style="color:#28acff">어떻게 플레이리스트를 만드나요?</a>'
+      }).then((result) => {
+        if (result.isConfirmed) {
+        } else if (result.isDenied) {
+          location.href = guide_link[site-5];
+        }
       })
     }
   }
   else{
-    if(site == 1){
+    if(site == 1 || site == 6){
       if (userAgent.search("macintosh") > -1) music_site_url = melon_mac_1 + melon_songid[theme] + melon_mac_2;
       else music_site_url = melon_win + melon_songid[theme];
+      if (site != 6) location.href = music_site_url;
     }
-    else if(site == 2) window.open( genie_web + genie_songid[theme], '', 'scrollbars=no, width=600, height=600');
-    if(site == 1) location.href = music_site_url;
+    else if(site == 2 || site == 7) if (site != 6) window.open( genie_web + genie_songid[theme], '', 'scrollbars=no, width=600, height=600');
+    if(site == 6){
+      Swal.fire({
+        icon: 'success',
+        title: '멜론 플레이리스트 생성 완료!',
+        text: '혹시 가이드를 확인하셨나요? 아직 확인하지 않으셨다면 가이드를 먼저 확인해주세요!🍋',
+        showDenyButton: true,
+        focusConfirm: false,
+        focusDeny: true,
+        confirmButtonText: '바로 담기',
+        denyButtonText: '가이드 보기',
+        confirmButtonColor: '#aaa',
+        denyButtonColor: '#3085d6',
+      }).then((result) => {
+        if (result.isConfirmed) {
+          location.href = music_site_url;
+        } else if (result.isDenied) {
+          location.href = guide_link[site-5];
+        }
+      })
+    }
+    else if(site == 7){
+      Swal.fire({
+        icon: 'success',
+        title: '지니 플레이리스트 생성 완료!',
+        text: '혹시 가이드를 확인하셨나요? 아직 확인하지 않으셨다면 가이드를 먼저 확인해주세요!🍋',
+        showDenyButton: true,
+        focusConfirm: false,
+        focusDeny: true,
+        confirmButtonText: '바로 담기',
+        denyButtonText: '가이드 보기',
+        confirmButtonColor: '#aaa',
+        denyButtonColor: '#3085d6',
+      }).then((result) => {
+        if (result.isConfirmed) {
+          window.open( genie_web + genie_songid[theme], '', 'scrollbars=no, width=600, height=600');
+        } else if (result.isDenied) {
+          location.href = guide_link[site-5];
+        }
+      })
+    }
   }
 }
