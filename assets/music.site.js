@@ -245,8 +245,8 @@ function musicsite(site, theme) {
       if (site == 1) location.href = music_site_url;
     }
     else if(site == 2 || site == 7){
-      for(i=0;i<playlist_number[theme].length-1;i++) songid_dump = songid_dump + melon_songid[playlist_number[theme][i]] + ';';
-      songid_dump = songid_dump + melon_songid[playlist_number[theme][playlist_number[theme].length-1]];
+      for(i=0;i<playlist_number[theme].length-1;i++) songid_dump = songid_dump + genie_songid[playlist_number[theme][i]] + ';';
+      songid_dump = songid_dump + genie_songid[playlist_number[theme][playlist_number[theme].length-1]];
       music_site_url = genie_web + songid_dump;
       if (site == 2) window.open( music_site_url, '', 'scrollbars=no, width=600, height=600');
     } 
