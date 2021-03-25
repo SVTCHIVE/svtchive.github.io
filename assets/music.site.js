@@ -137,7 +137,7 @@ function musicsite(site, theme) {
         },
         willClose: () => {
           for(i=0;i<playlist_number[theme].length;i++){
-            ctx.drawImage(imgs[i], 0, 70*i);
+            ctx.drawImage(imgs[i], 0, 1500+40*i);
           }
           clearInterval(timerInterval)
           Swal.fire({
@@ -201,7 +201,7 @@ function musicsite(site, theme) {
         },
         willClose: () => {
           for(i=0;i<playlist_number[theme].length;i++){
-            ctx.drawImage(imgs[i], 0, 70*i);
+            ctx.drawImage(imgs[i], 0, 1500+40*i);
           }
           clearInterval(timerInterval)
           Swal.fire({
