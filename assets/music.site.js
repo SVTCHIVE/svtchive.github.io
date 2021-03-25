@@ -68,7 +68,7 @@ function musicsite(site, theme) {
     ctx = canvas.getContext('2d');
 
     canvas.width = 350;
-    canvas.height = 70*playlist_number[theme].length;
+    canvas.height = 100+20*playlist_number[theme].length;
 
     var imgs = new Array();
     for(i=0;i<playlist_number[theme].length;i++){
@@ -137,7 +137,7 @@ function musicsite(site, theme) {
         },
         willClose: () => {
           for(i=0;i<playlist_number[theme].length;i++){
-            ctx.drawImage(imgs[i], 0, 1500+40*i);
+            ctx.drawImage(imgs[i], 0, 70*i);
           }
           clearInterval(timerInterval)
           Swal.fire({
@@ -185,7 +185,7 @@ function musicsite(site, theme) {
       Swal.fire({
         title: '만드는 중...',
         html: '플레이리스트를 만들고 있어요.',
-        timer: 50*playlist_number[theme].length,
+        timer: 1500+20*playlist_number[theme].length,
         timerProgressBar: false,
         didOpen: () => {
           Swal.showLoading()
@@ -201,7 +201,7 @@ function musicsite(site, theme) {
         },
         willClose: () => {
           for(i=0;i<playlist_number[theme].length;i++){
-            ctx.drawImage(imgs[i], 0, 1500+40*i);
+            ctx.drawImage(imgs[i], 0, 70*i);
           }
           clearInterval(timerInterval)
           Swal.fire({
