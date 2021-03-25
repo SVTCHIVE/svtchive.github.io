@@ -68,7 +68,7 @@ function musicsite(site, theme) {
     ctx = canvas.getContext('2d');
 
     canvas.width = 350;
-    canvas.height = 100+20*playlist_number[theme].length;
+    canvas.height = 70*playlist_number[theme].length;
 
     var imgs = new Array();
     for(i=0;i<playlist_number[theme].length;i++){
