@@ -1,4 +1,15 @@
 function musicsite(site, theme) {
+
+  if(theme > 50){
+    Swal.fire({
+      icon: 'info',
+      text: '아직 서포트 플레이리스트가 업데이트되지 않았어요. 컴백 후 업데이트가 완료되면 트위터에서 소식을 전해드릴게요!',
+      footer: '<a href="https://twitter.com/DAY6MusicData" style="color:#28acff">데이식스 음원자료 트위터</a>',
+      confirmButtonText: '알겠어요!'
+    })
+    return 0;
+  }
+
   // device test
   var mobile = (/iphone|ipad|ipod|android/i.test(navigator.userAgent.toLowerCase()));
   var userAgent = navigator.userAgent.toLowerCase();
@@ -48,8 +59,8 @@ function musicsite(site, theme) {
   playlist_number[12] = [55,0,35,4,60,41,9,7,64,1,10,22,57,80,42,19,20];
   playlist_number[13] = [30,44,77,17,73,14,24,5,67,2,31,32,84,26,65,72,47,48];
   playlist_number[14] = [13,73,70,14,47,37,59,36,49,23,21,54,58,8,84,86,82,53,38];
-  playlist_number[51] = [55,45,0,59,37,87,36,71,9,21,82,32,67,61,74,40,77,8,70,30,17,44,13,23,14,2,41,33,72,10,49]; // melon vibe
-  playlist_number[52] = [55,36,35,37,45,26,21,87,56,19,15,18]; // genie bugs
+  playlist_number[51] = [89,88,90,14,91,92,55,72,89,93,94,87,74,49,61,82,89,88,90,14,91,92,55,72,89,93,94,37,70,8,30,18]; // 2h
+  playlist_number[52] = [89,88,90,91,14,89,92,93,55,72,89,94,87,49,61,82]; // 1h
 
   // melon : 1 // genie : 2 // bugs : 3 // vibe : 4 // flo : 5
   // site = a / theme = b
@@ -58,7 +69,7 @@ function musicsite(site, theme) {
   var icon = ["error", "success"];
   var title = ["지원하지 않는 기기예요😥", "플레이리스트 생성 완료🎉"];
 
-  var guide_link = ["", "/guide#멜론-스트리밍-가이드", "/guide#지니-스트리밍-가이드", "/guide#벅스-스트리밍-가이드", "/guide#바이브-스트리밍-가이드", "/guide#플로-스트리밍-가이드"];
+  var guide_link = ["", "/guide#중복곡-안내-멜론", "/guide#중복곡-안내-지니", "/guide#중복곡-안내-벅스", "/guide#중복곡-안내-바이브", "/guide#중복곡-안내-플로"];
 
   if ( mobile || ( navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1 ) || site < 3 || ( site == 3 && userAgent.search("macintosh") > -1 ) ) ok = 1; // site test
   else ok = 0;
