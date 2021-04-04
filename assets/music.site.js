@@ -136,10 +136,15 @@ function musicsite(site, theme) {
           }, 100)
         },
         willClose: () => {
+          clearInterval(timerInterval)
+        }
+      }).then((result) => {
+        /* Read more about handling dismissals below */
+        if (result.dismiss === Swal.DismissReason.timer) {
+          console.log('cleared')
           for(i=0;i<playlist_number[theme].length;i++){
             ctx.drawImage(imgs[i], 0, 70*i);
           }
-          clearInterval(timerInterval)
           Swal.fire({
             icon: 'success',
             title: '생성 완료🎉',
@@ -153,11 +158,6 @@ function musicsite(site, theme) {
               canvas.width = 0;
               canvas.height = 0;
           })
-        }
-      }).then((result) => {
-        /* Read more about handling dismissals below */
-        if (result.dismiss === Swal.DismissReason.timer) {
-          console.log('cleared')
         }
       })
     }
@@ -200,10 +200,14 @@ function musicsite(site, theme) {
           }, 100)
         },
         willClose: () => {
+          clearInterval(timerInterval)
+        }
+      }).then((result) => {
+        /* Read more about handling dismissals below */
+        if (result.dismiss === Swal.DismissReason.timer) {
           for(i=0;i<playlist_number[theme].length;i++){
             ctx.drawImage(imgs[i], 0, 70*i);
           }
-          clearInterval(timerInterval)
           Swal.fire({
             icon: 'success',
             title: '생성 완료🎉',
@@ -227,11 +231,6 @@ function musicsite(site, theme) {
             anvas.width = 0;
             canvas.height = 0;
           })
-        }
-      }).then((result) => {
-        /* Read more about handling dismissals below */
-        if (result.dismiss === Swal.DismissReason.timer) {
-          console.log('cleared')
         }
       })
     }
