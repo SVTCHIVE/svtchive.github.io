@@ -83,6 +83,18 @@
   background-image: linear-gradient(to right, #fff 0%, #fff 25%, #d395ff 51%, #573bff 75%, #3b3bff 100%);
 }
 
+.p_container {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  margin-bottom: 2px;
+}
+
 .p_btn {
   flex: 1 1 auto;
   margin: 2px;
@@ -105,6 +117,8 @@
   border: 1px solid transparent;
   text-shadow: 0px 0px 10px rgba(0,0,0,0.2);
 }
+
+.banner_btn:focus { outline: none; }
 
 .m_container {
   display: flex;
