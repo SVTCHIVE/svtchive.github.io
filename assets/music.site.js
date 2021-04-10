@@ -1,5 +1,5 @@
 function musicsite(site, theme) {
-
+  
   if(theme > 50){
     Swal.fire({
       icon: 'info',
@@ -30,7 +30,6 @@ function musicsite(site, theme) {
   var music_site_url;
   var songid_dump = "";
   var i;
-  var img_check;
 
   // swal timer
   let timerInterval
@@ -41,7 +40,7 @@ function musicsite(site, theme) {
   var bugs_songid = [4551004,4551005,4551006,4551007,4551008,4551009,30203510,30203511,30203512,30203513,30203514,30203515,30511020,30511021,30540153,30540154,30573080,30573081,30612023,30612024,30646154,30646155,30677527,30677528,30677532,30677540,30708337,30708338,30742600,30742601,30772387,30772388,30800908,30800909,30833861,30833862,30872542,30872543,30872554,31120686,31120687,31120688,31120689,31120690,31120691,31225862,31304162,31318643,31360121,31360122,31360123,31360124,31360125,31360126,31650948,31650949,31650950,31650951,31650952,31650953,31728992,31728993,31728994,31728995,31728996,31728997,31728998,31728999,31729000,31729001,31729002,31908732,31908733,31908734,31908735,31908736,31908737,31908738,31908739,32006764,32006765,32006766,32006767,32006768,32006769,32006770,6029882,32124930];
   var vibe_songid = [5701352,5701356,5701361,5701347,5701349,5701354,6049320,6049321,6049322,6049323,6049324,6049325,16035922,16035923,16081363,16081364,16473414,16473415,17409146,17409156,17735999,17736000,17836612,17836615,17836617,17836625,18419728,18419729,18676775,18676777,18939330,18939331,19183554,19183552,19738258,19738184,20121086,20121084,20121097,21408918,21408915,21408920,21408916,21408919,21408917,21712039,22531444,22886295,23177550,23177552,23177555,23177558,23177561,23177562,27852477,27852478,27852479,27852481,27852480,27852482,30184802,30165478,30184807,30184803,30184808,30184804,30184805,30184806,30184809,30184810,30184811,40319205,40319204,40319206,40319207,40319208,40319209,40319210,40319211,41909362,41909363,41909364,41909365,41909367,41909366,41909368,43626549,44037981];
   var playlist_parts = ["/playlist/parts/0.png","/playlist/parts/1.png","/playlist/parts/2.png","/playlist/parts/3.png","/playlist/parts/4.png","/playlist/parts/5.png","/playlist/parts/6.png","/playlist/parts/7.png","/playlist/parts/8.png","/playlist/parts/9.png","/playlist/parts/10.png","/playlist/parts/11.png","/playlist/parts/12.png","/playlist/parts/13.png","/playlist/parts/14.png","/playlist/parts/15.png","/playlist/parts/16.png","/playlist/parts/17.png","/playlist/parts/18.png","/playlist/parts/19.png","/playlist/parts/20.png","/playlist/parts/21.png","/playlist/parts/22.png","/playlist/parts/23.png","/playlist/parts/24.png","/playlist/parts/25.png","/playlist/parts/26.png","/playlist/parts/27.png","/playlist/parts/28.png","/playlist/parts/29.png","/playlist/parts/30.png","/playlist/parts/31.png","/playlist/parts/32.png","/playlist/parts/33.png","/playlist/parts/34.png","/playlist/parts/35.png","/playlist/parts/36.png","/playlist/parts/37.png","/playlist/parts/38.png","/playlist/parts/39.png","/playlist/parts/40.png","/playlist/parts/41.png","/playlist/parts/42.png","/playlist/parts/43.png","/playlist/parts/44.png","/playlist/parts/45.png","/playlist/parts/46.png","/playlist/parts/47.png","/playlist/parts/48.png","/playlist/parts/49.png","/playlist/parts/50.png","/playlist/parts/51.png","/playlist/parts/52.png","/playlist/parts/53.png","/playlist/parts/54.png","/playlist/parts/55.png","/playlist/parts/56.png","/playlist/parts/57.png","/playlist/parts/58.png","/playlist/parts/59.png","/playlist/parts/60.png","/playlist/parts/61.png","/playlist/parts/62.png","/playlist/parts/63.png","/playlist/parts/64.png","/playlist/parts/65.png","/playlist/parts/66.png","/playlist/parts/67.png","/playlist/parts/68.png","/playlist/parts/69.png","/playlist/parts/70.png","/playlist/parts/71.png","/playlist/parts/72.png","/playlist/parts/73.png","/playlist/parts/74.png","/playlist/parts/75.png","/playlist/parts/76.png","/playlist/parts/77.png","/playlist/parts/78.png","/playlist/parts/79.png","/playlist/parts/80.png","/playlist/parts/81.png","/playlist/parts/82.png","/playlist/parts/83.png","/playlist/parts/84.png","/playlist/parts/85.png","/playlist/parts/86.png","/playlist/parts/87.png","/playlist/parts/88.png","/playlist/parts/89.png","/playlist/parts/90.png","/playlist/parts/91.png","/playlist/parts/92.png","/playlist/parts/93.png","/playlist/parts/94.png"];
-  
+
   // playlist array
   var playlist_number = Array.from(Array(100),() => Array()); // playlist 개수 한도 100 설정
   playlist_number[0] = [55,45,0,59,37,87,36,71,9,21,82,32,67,61,74,40,77,8,70,30,17,44,13,23,14,2,41,33,72,10,49];
@@ -61,6 +60,10 @@ function musicsite(site, theme) {
   playlist_number[14] = [13,73,70,14,47,37,59,36,49,23,21,54,58,8,84,86,82,53,38];
   playlist_number[51] = [89,88,90,14,91,92,55,72,89,93,94,87,74,49,61,82,89,88,90,14,91,92,55,72,89,93,94,37,70,8,30,18]; // 2h
   playlist_number[52] = [89,88,90,91,14,89,92,93,55,72,89,94,87,49,61,82]; // 1h
+  playlist_number[53] = [89,88,90,14,91,92,55,72];
+  playlist_number[54] = [89,93,94,87,74,49,61,82];
+  playlist_number[55] = [89,88,90,14,91,92,55,72];
+  playlist_number[56] = [89,93,94,37,70,8,30,18];
 
   // melon : 1 // genie : 2 // bugs : 3 // vibe : 4 // flo : 5
   // site = a / theme = b
@@ -77,9 +80,6 @@ function musicsite(site, theme) {
   if ( (site==5||site==10) && mobile ){
     var canvas = document.querySelector("#playlist"),
     ctx = canvas.getContext('2d');
-
-    canvas.width = 350;
-    canvas.height = 70*playlist_number[theme].length;
 
     var imgs = new Array();
     for(i=0;i<playlist_number[theme].length;i++){
@@ -126,6 +126,7 @@ function musicsite(site, theme) {
       for(i=0;i<playlist_number[theme].length-1;i++) songid_dump = songid_dump + vibe_songid[playlist_number[theme][i]] + ',';
       songid_dump = songid_dump + vibe_songid[playlist_number[theme][playlist_number[theme].length-1]];
       music_site_url = vibe + songid_dump;
+      if(theme == 51) music_site_url = "/support_vibe";
     }
     if(site < 5)  location.href = music_site_url;
     else if (site == 5){
@@ -152,7 +153,9 @@ function musicsite(site, theme) {
       }).then((result) => {
         /* Read more about handling dismissals below */
         if (result.dismiss === Swal.DismissReason.timer) {
-          console.log('cleared')
+          canvas.width = 350;
+          canvas.height = 70*playlist_number[theme].length;
+
           for(i=0;i<playlist_number[theme].length;i++){
             ctx.drawImage(imgs[i], 0, 70*i);
           }
@@ -215,6 +218,9 @@ function musicsite(site, theme) {
         }
       }).then((result) => {
         /* Read more about handling dismissals below */
+        canvas.width = 350;
+        canvas.height = 70*playlist_number[theme].length;
+
         if (result.dismiss === Swal.DismissReason.timer) {
           for(i=0;i<playlist_number[theme].length;i++){
             ctx.drawImage(imgs[i], 0, 70*i);
