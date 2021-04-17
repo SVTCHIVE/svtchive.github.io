@@ -33,31 +33,13 @@ layout: default
 
         <hr>
 
-        <!-- Social Media share buttons -->
-        <div style="width: 100%; text-align: center; margin-bottom: 24px;">
-        <!-- Facebook share button -->
-        <a href="" onclick="window.open(url_combine_fb, '', 'scrollbars=no, width=600, height=600'); return false;">
-        <img src="/img/socialmedia/facebook.gif" alt="페이스북 공유 버튼" title="페이스북으로 공유하기" class="sharebtn_custom" style="width: 48px; height: 48px; border-radius: 30px;"></a>
-        <!-- Twitter share button -->
-        <a href="" onclick="window.open(url_combine_tw, '', 'scrollbars=no, width=600, height=600'); return false;">
-        <img src="/img/socialmedia/twitter.gif" alt="트위터 공유 버튼" title="트위터로 공유하기" class="sharebtn_custom" style="width: 48px; height: 48px; border-radius: 30px;"></a>
-        <!-- Naver share button -->
-        <a href="" onclick="window.open(url_combine_naver, '', 'scrollbars=no, width=600, height=600'); return false;">
-        <img src="/img/socialmedia/naver.gif" alt="네이버 공유 버튼" title="네이버로 공유하기" class="sharebtn_custom" style="width: 48px; height: 48px; border-radius: 30px;"></a>
+        <div class="s_container">
+          <button type="button" class="banner_btn banner_btn-1" onclick="window.open(url_combine_tw, '', 'scrollbars=no, width=600, height=600'); return false;">
+            <span class="fab fa-twitter"></span>트위터로 공유하기</button>
         </div>
 
-        <!-- Social media share websites -->
         <script>
-        var url_default_fb = "https://www.facebook.com/sharer/sharer.php?u=";
-        var url_default_tw_txt = "https://twitter.com/intent/tweet?text=";
-        var url_default_tw_url = "&url=";
-        var url_default_naver = "http://share.naver.com/web/shareView.nhn?url=";
-        var title_default_naver = "&title=";
-        var url_this_page = location.href;
-        var title_this_page = document.title;
-        var url_combine_fb = url_default_fb + url_this_page;
-        var url_combine_tw = url_default_tw_txt + "데이식스 플레이에서 데이식스의 음악을 만나봐요!😊 " + " %23데이식스플레이 %23DAY6Play" + url_default_tw_url + url_this_page;
-        var url_combine_naver = url_default_naver + encodeURI(url_this_page) + title_default_naver + encodeURI(title_this_page);
+        var url_combine_tw = "https://twitter.com/intent/tweet?text=" + "데이식스 플레이에서 데이식스의 음악을 만나봐요!😊 " + " %23데이식스플레이 %23DAY6Play" + "&url=" + location.href;
         </script>
 
         <div class="clearfix">
