@@ -180,7 +180,7 @@
 .banner_btn:focus { outline: none; }
 
 .banner_btn-1 {
-  background-image: linear-gradient(to right, #FFE29F 0%, #FFA99F 48%, #FF719A 100%);
+  background-image: linear-gradient(to right, #fc9 0%, #f96 33%, #f99 66%, #f69 100%);
   background-size: 400% 400%;
   -webkit-animation: animatedgradient 6s ease infinite;
   -moz-animation: animatedgradient 6s ease infinite;
@@ -189,7 +189,7 @@
 }
 
 .banner_btn-2 {
-  background-image: linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
+  background-image: linear-gradient(to right, #f36 0%, #f66 33%, #f96 66%, #fc6 100%);
   background-size: 400% 400%;
   -webkit-animation: animatedgradient 6s ease infinite;
   -moz-animation: animatedgradient 6s ease infinite;
@@ -198,7 +198,12 @@
 }
 
 .banner_btn-3 {
-  background-image: linear-gradient(to right, #b5b7f0 0%, #a8ccf0 100%);
+  background-image: linear-gradient(to right, #ccf 0%, #9cf 100%);
+  background-size: 100% 100%;
+}
+
+.banner_btn-4 {
+  background-image: linear-gradient(to right, #39f 0%, #6cf 100%);
   background-size: 100% 100%;
 }
 
