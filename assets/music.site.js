@@ -258,7 +258,6 @@ function musicsite(site, theme) {
       songid_dump = songid_dump + melon_songid[playlist_number[theme][playlist_number[theme].length-1]];
       if (userAgent.search("macintosh") > -1) music_site_url = melon_mac_1 + songid_dump + melon_mac_2;
       else music_site_url = melon_win + songid_dump;
-      if (site == 1) location.href = music_site_url;
     }
     else if(site == 2 || site == 7){
       for(i=0;i<playlist_number[theme].length-1;i++) songid_dump = songid_dump + genie_songid[playlist_number[theme][i]] + ';';
@@ -269,12 +268,57 @@ function musicsite(site, theme) {
     else if(site == 3 || site == 8){
       for(i=0;i<playlist_number[theme].length-1;i++) songid_dump = songid_dump + bugs_songid[playlist_number[theme][i]] + ',';
       songid_dump = songid_dump + bugs_songid[playlist_number[theme][playlist_number[theme].length-1]];
-      if (userAgent.search("macintosh") > -1){
-        music_site_url = bugs_mac_1 + songid_dump + bugs_mac_2;
-        if (site == 3) location.href = music_site_url;
-      }
+      if (userAgent.search("macintosh") > -1) music_site_url = bugs_mac_1 + songid_dump + bugs_mac_2;
     }
-    if(site == 6){
+    if(site == 1 && userAgent.search("macintosh") > -1){
+      Swal.fire({
+        icon: 'success',
+        title: '멜론 플레이리스트 생성 완료🎉',
+        text: '멜론 플레이어를 설치하셨나요? 플레이어를 설치하지 않으셨다면 아래의 링크를 통해 플레이어를 설치해주세요!',
+        showDenyButton: true,
+        focusConfirm: false,
+        focusDeny: true,
+        confirmButtonText: '바로 담기',
+        denyButtonText: '닫기',
+        footer: '<a href="//www.melon.com/customer/serviceintro/multi_pc_web.htm" style="color:#28acff">멜론 플레이어 설치하기</a>'
+      }).then((result) => {
+        if (result.isConfirmed) {
+          location.href = music_site_url;
+        }
+      })
+    } else if (site == 1){
+      Swal.fire({
+        icon: 'success',
+        title: '멜론 플레이리스트 생성 완료🎉',
+        text: '멜론 플레이어를 설치하셨나요? 플레이어를 설치하지 않으셨다면 아래의 링크를 통해 플레이어를 설치해주세요!',
+        showDenyButton: true,
+        focusConfirm: false,
+        focusDeny: true,
+        confirmButtonText: '바로 담기',
+        denyButtonText: '닫기',
+        footer: '<a href="//www.melon.com/customer/serviceintro/index.htm" style="color:#28acff">멜론 플레이어 설치하기</a>',
+      }).then((result) => {
+        if (result.isConfirmed) {
+          location.href = music_site_url;
+        }
+      })
+    } else if (site == 3 && userAgent.search("macintosh") > -1){
+      Swal.fire({
+        icon: 'success',
+        title: '벅스 플레이리스트 생성 완료🎉',
+        text: '벅스 플레이어를 설치하셨나요? 플레이어를 설치하지 않으셨다면 아래의 링크를 통해 플레이어를 설치해주세요!',
+        showDenyButton: true,
+        focusConfirm: false,
+        focusDeny: true,
+        confirmButtonText: '바로 담기',
+        denyButtonText: '닫기',
+        footer: '<a href="//music.bugs.co.kr/serviceGuide/pc/bugsPlayer" style="color:#28acff">벅스 플레이어 설치하기</a>',
+      }).then((result) => {
+        if (result.isConfirmed) {
+          location.href = music_site_url;
+        }
+      })
+    } else if(site == 6 && userAgent.search("macintosh") > -1){
       Swal.fire({
         icon: 'success',
         title: '멜론 플레이리스트 생성 완료🎉',
@@ -286,6 +330,7 @@ function musicsite(site, theme) {
         denyButtonText: '가이드 보기',
         confirmButtonColor: '#aaa',
         denyButtonColor: '#3085d6',
+        footer: '<a href="//www.melon.com/customer/serviceintro/multi_pc_web.htm" style="color:#28acff">멜론 플레이어 설치하기</a>'
       }).then((result) => {
         if (result.isConfirmed) {
           location.href = music_site_url;
@@ -293,8 +338,27 @@ function musicsite(site, theme) {
           location.href = guide_link[site-5];
         }
       })
-    }
-    else if(site == 7){
+    } else if(site == 6){
+      Swal.fire({
+        icon: 'success',
+        title: '멜론 플레이리스트 생성 완료🎉',
+        text: '혹시 가이드를 확인하셨나요? 아직 확인하지 않으셨다면 가이드를 먼저 확인해주세요!',
+        showDenyButton: true,
+        focusConfirm: false,
+        focusDeny: true,
+        confirmButtonText: '바로 담기',
+        denyButtonText: '가이드 보기',
+        confirmButtonColor: '#aaa',
+        denyButtonColor: '#3085d6',
+        footer: '<a href="//www.melon.com/customer/serviceintro/index.htm" style="color:#28acff">멜론 플레이어 설치하기</a>'
+      }).then((result) => {
+        if (result.isConfirmed) {
+          location.href = music_site_url;
+        } else if (result.isDenied) {
+          location.href = guide_link[site-5];
+        }
+      })
+    } else if(site == 7){
       Swal.fire({
         icon: 'success',
         title: '지니 플레이리스트 생성 완료🎉',
@@ -313,8 +377,7 @@ function musicsite(site, theme) {
           location.href = guide_link[site-5];
         }
       })
-    }
-    else if(site == 8 && userAgent.search("macintosh") > -1){
+    } else if(site == 8 && userAgent.search("macintosh") > -1){
       Swal.fire({
         icon: 'success',
         title: '벅스 플레이리스트 생성 완료🎉',
@@ -326,6 +389,7 @@ function musicsite(site, theme) {
         denyButtonText: '가이드 보기',
         confirmButtonColor: '#aaa',
         denyButtonColor: '#3085d6',
+        footer: '<a href="//music.bugs.co.kr/serviceGuide/pc/bugsPlayer" style="color:#28acff">벅스 플레이어 설치하기</a>',
       }).then((result) => {
         if (result.isConfirmed) {
           location.href = music_site_url;
