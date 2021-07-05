@@ -24,8 +24,7 @@ function musicsite(site, theme) {
   var genie_android = "cromegenie://scan/?landing_type=31&landing_target=";
   var genie_web = "https://www.genie.co.kr/player/shareProcessV2?xgnm=";
   var bugs = "bugs3://app/tracks/lists?title=전체듣기&miniplay=Y&track_ids=";
-  var bugs_mac_1 = "bugs3://app/tracks/";
-  var bugs_mac_2 = "?autoplay=Y";
+  var bugs_pc = "https://music.bugs.co.kr/newPlayer?trackId=";
   var vibe = "vibe://listen?version=3&trackIds=";
   var music_site_url;
   var songid_dump = "";
@@ -59,7 +58,6 @@ function musicsite(site, theme) {
   playlist_number[13] = [30,44,77,17,73,14,24,5,67,2,31,32,84,26,65,72,47,48];
   playlist_number[14] = [13,73,70,14,47,37,59,36,49,23,21,54,58,8,84,86,82,53,38];
   playlist_number[51] = [89,88,90,14,91,92,55,72,89,93,94,87,74,49,61,82,89,88,90,14,91,92,55,72,89,93,94,37,70,8,30,18];
-  playlist_number[52] = [89,88,90,91,14,89,92,93,55,72,89,94,87,49,61,82];
   playlist_number[53] = [89,88,90,14,91,92,55,72];
   playlist_number[54] = [89,93,94,87,74,49,61,82];
   playlist_number[55] = [89,88,90,14,91,92,55,72];
@@ -75,7 +73,7 @@ function musicsite(site, theme) {
 
   var guide_link = ["", "/guide#멜론-스트리밍-가이드", "/guide#지니-스트리밍-가이드", "/guide#벅스-스트리밍-가이드", "/guide#바이브-스트리밍-가이드", "/guide#플로-스트리밍-가이드"];
 
-  if ( mobile || ( navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1 ) || site < 3 || ( site == 3 && userAgent.search("macintosh") > -1 ) ) ok = 1; // site test
+  if ( mobile || ( navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1 ) || site < 4 ) ok = 1; // site test
   else ok = 0;
 
   if ( (site==5||site==10) && mobile ){
@@ -269,7 +267,8 @@ function musicsite(site, theme) {
     else if(site == 3 || site == 8){
       for(i=0;i<playlist_number[theme].length-1;i++) songid_dump = songid_dump + bugs_songid[playlist_number[theme][i]] + ',';
       songid_dump = songid_dump + bugs_songid[playlist_number[theme][playlist_number[theme].length-1]];
-      if (userAgent.search("macintosh") > -1) music_site_url = bugs_mac_1 + songid_dump + bugs_mac_2;
+      music_site_url = bugs_pc + songid_dump;
+      if (site == 3) window.open( music_site_url, '', 'scrollbars=no, width=350, height=800');
     }
     if(site == 1 && userAgent.search("macintosh") > -1){
       Swal.fire({
@@ -303,17 +302,15 @@ function musicsite(site, theme) {
           location.href = music_site_url;
         }
       })
-    } else if (site == 3 && userAgent.search("macintosh") > -1){
+    } else if (site == 3){
       Swal.fire({
         icon: 'success',
         title: '벅스 플레이리스트 생성 완료🎉',
-        text: '벅스 플레이어를 설치하셨나요? 플레이어를 설치하지 않으셨다면 아래의 링크를 통해 플레이어를 설치해주세요!',
         showDenyButton: true,
         focusConfirm: false,
         focusDeny: true,
         confirmButtonText: '바로 담기',
         denyButtonText: '닫기',
-        footer: '<a href="//music.bugs.co.kr/serviceGuide/pc/bugsPlayer" style="color:#28acff">벅스 플레이어 설치하기</a>',
       }).then((result) => {
         if (result.isConfirmed) {
           location.href = music_site_url;
@@ -378,7 +375,7 @@ function musicsite(site, theme) {
           location.href = guide_link[site-5];
         }
       })
-    } else if(site == 8 && userAgent.search("macintosh") > -1){
+    } else if(site == 8){
       Swal.fire({
         icon: 'success',
         title: '벅스 플레이리스트 생성 완료🎉',
@@ -389,11 +386,10 @@ function musicsite(site, theme) {
         confirmButtonText: '바로 담기',
         denyButtonText: '가이드 보기',
         confirmButtonColor: '#aaa',
-        denyButtonColor: '#3085d6',
-        footer: '<a href="//music.bugs.co.kr/serviceGuide/pc/bugsPlayer" style="color:#28acff">벅스 플레이어 설치하기</a>',
+        denyButtonColor: '#3085d6'
       }).then((result) => {
         if (result.isConfirmed) {
-          location.href = music_site_url;
+          window.open( music_site_url, '', 'scrollbars=no, width=350, height=800');
         } else if (result.isDenied) {
           location.href = guide_link[site-5];
         }
