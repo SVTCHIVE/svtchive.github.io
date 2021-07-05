@@ -1,5 +1,15 @@
 function musicsite(site, theme) {
 
+  if(theme > 50){
+    Swal.fire(
+      '앗!',
+      '아직 스밍리스트가 업데이트되지 않았어요😥',
+      'info'
+    )
+
+    return;
+  }
+
   // device test
   var mobile = (/iphone|ipad|ipod|android/i.test(navigator.userAgent.toLowerCase()));
   var userAgent = navigator.userAgent.toLowerCase();
