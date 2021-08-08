@@ -292,20 +292,6 @@ function musicsite(site, theme) {
           location.href = music_site_url;
         }
       })
-    } else if (site == 3){
-      Swal.fire({
-        icon: 'success',
-        title: '벅스 플레이리스트 생성 완료🎉',
-        showDenyButton: true,
-        focusConfirm: false,
-        focusDeny: true,
-        confirmButtonText: '바로 담기',
-        denyButtonText: '닫기',
-      }).then((result) => {
-        if (result.isConfirmed) {
-          location.href = music_site_url;
-        }
-      })
     } else if(site == 6 && userAgent.search("macintosh") > -1){
       Swal.fire({
         icon: 'success',
