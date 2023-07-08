@@ -13,8 +13,7 @@ body{
     letter-spacing: -1px;
 }
 
-a, li{
-    text-decoration: none;
+li{
     list-style-type: none;
 }
 
@@ -109,7 +108,7 @@ header.masthead .overlay{
     flex-wrap: wrap;
     justify-content: space-around;
     row-gap: 50px;
-    padding-bottom: 0;
+    padding-left: 0;
 }
 
 .album-content{
@@ -120,10 +119,10 @@ header.masthead .overlay{
     width: 300px;
 }
 
-.album-content p{
+.album-content  .album-name{
     text-align: center;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-weight: 600;
-    margin: 10px 0;
+    margin: 12px 0;
 }
 
