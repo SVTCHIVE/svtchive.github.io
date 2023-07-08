@@ -157,12 +157,13 @@ header.masthead .overlay-modify{
     margin: 20px 0;
     display: flex;
     justify-content: space-between;
-    padding: 8px;
+    align-items: center;
+    padding: 8px 12px;
 }
 
 .track-title{
     font-size: 1.2rem;
-    color: #4A4A4A;
+    color: #4A4A4A !important;
     font-weight: 500;
     background-color: transparent !important;
 }
