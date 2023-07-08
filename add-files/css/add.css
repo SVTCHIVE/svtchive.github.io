@@ -1,0 +1,26 @@
+@charset "utf-8";
+
+*{
+    font-family: 'Pretendard', sans-serif !important;
+}
+
+body{
+    background-color: #131313;
+    color: #D9D9D9;
+    letter-spacing: -2px;
+}
+
+.page-heading{
+    padding: 200px 0;
+    text-align: center;
+}
+
+.page-heading h1{
+    color: #A6A8DC;
+    margin-bottom: 10px;
+}
+
+.page-heading .subheading{
+    font-size: 1rem;
+    font-weight: 500;
+}

@@ -1,13 +1,13 @@
-title:              데이식스 플레이
-email:              my@day6.kr
-description:        세상에서 가장 빠르게 데이식스의 음악을 담을 수 있는 데이식스 플레이에서 순식간에 수많은 데이식스의 음악을 담아보세요.
-author:             데이식스 음원자료
+title:              SVTCHIVE
+email:              ""
+description:        시간과 공간에 구애받지 않는 세븐틴 저장소🗂️
+author:             SVTCHIVE
 baseurl:            ""
 url:                "https://day6.kr"
 enforce_ssl:        "www.day6.kr"
 
 # Social Profiles
-twitter_username:   DAY6MusicData
+twitter_username:   SVTCHIVE
 github_username:
 facebook_username:
 instagram_username:
