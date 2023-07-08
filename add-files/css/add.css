@@ -127,36 +127,49 @@ span.post-info{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
+}
+
+.album-info img{
+    margin-bottom: 16px;
 }
 
 .album-list{
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: 600;
     width: 300px;
+    margin-bottom: 12px;
 }
 
 .album-title{
-    font-size: 0.95rem;
+    font-size: 1rem;
     font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.tracklist{
+    padding: 0;
 }
 
 .track-container{
     background-color: #313131 !important;
     border-radius: 4px;
-    margin: 10px 0;
+    margin: 20px 0;
     display: flex;
     justify-content: space-between;
+    padding: 8px;
 }
 
 .track-title{
     font-size: 1.2rem;
     color: #4A4A4A;
     font-weight: 500;
+    background-color: transparent !important;
 }
 
 .title-right{
     color: #6E6E6E;
+    background-color: transparent !important;
 }
 
 .track-title.have{
