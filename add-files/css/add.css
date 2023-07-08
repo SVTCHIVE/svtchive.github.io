@@ -61,10 +61,6 @@ nav#mainNav .navbar-toggler{
     justify-content: space-around;
 }
 
-.col-lg-8.col-md-10.mx-auto.home-content:hover{
-
-}
-
 .col-lg-8.col-md-10.mx-auto.home-content hr{
     display: none;
 }
@@ -130,12 +126,14 @@ span.post-info{
 .album-info{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
+    margin-bottom: 30px;
 }
 
 .album-list{
     font-size: 1.2rem;
     font-weight: 600;
+    width: 300px;
 }
 
 .album-title{
@@ -144,9 +142,11 @@ span.post-info{
 }
 
 .track-container{
-    background-color: #313131;
+    background-color: #313131 !important;
     border-radius: 4px;
     margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
 }
 
 .track-title{
