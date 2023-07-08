@@ -5,8 +5,8 @@
 }
 
 body{
-    background-color: #131313;
-    color: #D9D9D9;
+    background-color: #131313 !important;
+    color: #D9D9D9 !important;
     letter-spacing: -2px;
 }
 
