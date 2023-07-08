@@ -88,9 +88,9 @@ span.post-info{
 }
 
 /* 문서 내용 */
-header.masthead .overlay{
+/* header.masthead .overlay{
     opacity: 1;
-}
+} */
 
 .post .post-heading{
     padding: 150px 0 100px;
@@ -130,7 +130,7 @@ header.masthead .overlay{
 .album-info{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .album-list{
@@ -143,8 +143,7 @@ header.masthead .overlay{
     font-weight: 400;
 }
 
-
-.track-tab{
+.track-container{
     background-color: #313131;
     border-radius: 4px;
     margin: 10px 0;
