@@ -18,7 +18,7 @@ li{
 }
 
 a:hover{
-    text-decoration: none;
+    text-decoration: none !important;
 }
 
 .not-black{
@@ -132,7 +132,7 @@ header.masthead .overlay-modify{
 
 /* 응원법 상세 1 */
 .album-track{
-    margin: 20px 0 30px;
+    margin: 30px 0;
 }
 
 .tracklist{
@@ -169,10 +169,12 @@ header.masthead .overlay-modify{
     display: flex;
     justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .button-box .alpha-text{
     color: #888888 !important;
+    margin: 16px 0;
 }
 
 .button-box .alpha-button{
@@ -180,4 +182,5 @@ header.masthead .overlay-modify{
     border: none;
     border-radius: 4px;
     padding: 8px 12px;
+    text-align: center;
 }
