@@ -10,7 +10,7 @@
 body{
     background-color: #131313 !important;
     color: #D9D9D9 !important;
-    letter-spacing: -2px;
+    letter-spacing: -1px;
 }
 
 a, li{
@@ -22,10 +22,6 @@ nav#mainNav{
     background-color: #131313 !important;
     color: #D9D9D9;
     border-bottom: 1px solid rgba(255,255,255,0.5);
-}
-
-nav#mainNav .navbar-brand {
-    letter-spacing: -1px !important;
 }
 
 nav#mainNav .navbar-toggler{
@@ -42,6 +38,7 @@ nav#mainNav .navbar-toggler{
 .page-heading h1{
     color: #A6A8DC !important;
     margin-bottom: 10px;
+    letter-spacing: -2px;
 }
 
 .page-heading .subheading{
@@ -54,7 +51,6 @@ nav#mainNav .navbar-toggler{
     font-weight: 400 !important;
     color: #888888 !important;
     line-height: 1.2 !important;
-    letter-spacing: -1px;
 }
 
 /* 홈 내용 */
@@ -81,11 +77,14 @@ nav#mainNav .navbar-toggler{
     border-bottom: 2px solid #D9D9D9;
 }
 
+.home-content .post-title{
+    letter-spacing: -2px;
+}
+
 span.post-info{
     width: 300px;
     font-weight: 500;
     font-size: 1rem;
-    letter-spacing: -1px;
 }
 
 /* 문서 내용 */
@@ -116,12 +115,7 @@ header.masthead .overlay{
 .album-content span{
     text-align: center;
     font-size: 1.2rem;
-    letter-spacing: -1px;
     font-weight: 600;
     margin: 10px 0;
 }
 
-/* 푸터 수정 */
-footer .copyright{
-    letter-spacing: -1px;
-}
