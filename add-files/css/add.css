@@ -17,6 +17,10 @@ li{
     list-style-type: none;
 }
 
+a:hover{
+    text-decoration: none;
+}
+
 .not-black{
     background-color: initial !important;
 }
@@ -127,28 +131,8 @@ header.masthead .overlay-modify{
 }
 
 /* 응원법 상세 1 */
-.album-info{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin-bottom: 50px;
-}
-
-.album-info img{
-    margin-bottom: 16px;
-}
-
-.album-list{
-    font-size: 1.3rem;
-    font-weight: 600;
-    width: 300px;
-    margin-bottom: 12px;
-}
-
-.album-title{
-    font-size: 1rem;
-    font-weight: 400;
-    margin-bottom: 10px;
+.album-track{
+    margin: 20px 0 30px;
 }
 
 .tracklist{
@@ -162,7 +146,7 @@ header.masthead .overlay-modify{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 8px 12px;
+    padding: 8px 14px;
 }
 
 .track-title{
@@ -178,5 +162,22 @@ header.masthead .overlay-modify{
 }
 
 .track-title.have{
-    color: #D9D9D9;
+    color: #D9D9D9 !important;
+}
+
+.button-box{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.button-box .alpha-text{
+    color: #888888 !important;
+}
+
+.button-box .alpha-button{
+    background-color: #394D67 !important;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 12px;
 }
