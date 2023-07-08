@@ -88,6 +88,20 @@ span.post-info{
 }
 
 /* 문서 내용 */
+header.masthead .overlay{
+    opacity: 1;
+}
+
+/* 응원법 */
+#album{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.album-content{
+    width: 300px;
+}
 
 /* 푸터 수정 */
 footer .copyright{
