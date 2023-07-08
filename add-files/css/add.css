@@ -3,7 +3,7 @@
 /* 전체 수정 */
 *{
     font-family: 'Pretendard', sans-serif !important;
-    /* background-color: #131313 !important; */
+    background-color: #131313 !important;
     color: #D9D9D9 !important;
 }
 
@@ -15,6 +15,10 @@ body{
 
 li{
     list-style-type: none;
+}
+
+.not-black{
+    background-color: initial !important;
 }
 
 /* 내비게이션 수정 */
