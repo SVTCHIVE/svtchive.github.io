@@ -3,7 +3,7 @@
 /* 전체 수정 */
 *{
     font-family: 'Pretendard', sans-serif !important;
-    background-color: #131313 !important;
+    /* background-color: #131313 !important; */
     color: #D9D9D9 !important;
 }
 
@@ -153,6 +153,10 @@ span.post-info{
     font-size: 1.2rem;
     color: #4A4A4A;
     font-weight: 500;
+}
+
+.title-right{
+    color: #6E6E6E;
 }
 
 .track-title.have{
