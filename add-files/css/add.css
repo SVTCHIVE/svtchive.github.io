@@ -1,7 +1,10 @@
 @charset "utf-8";
 
+/* 전체 수정 */
 *{
     font-family: 'Pretendard', sans-serif !important;
+    background-color: #131313 !important;
+    color: #D9D9D9 !important;
 }
 
 body{
@@ -10,6 +13,23 @@ body{
     letter-spacing: -2px;
 }
 
+/* 내비게이션 수정 */
+#mainNav{
+    background-color: #131313 !important;
+    color: #D9D9D9;
+    border-bottom: 1px solid rgba(255,255,255,0.5);
+}
+
+#mainNav .navbar-brand {
+    letter-spacing: -1px;
+}
+
+#mainNav .navbar-toggler{
+    background-color: #131313;
+    border: 1px solid rgba(255,255,255,0.5);
+}
+
+/* 홈 제목 수정 */
 .page-heading{
     padding: 200px 0;
     text-align: center;
@@ -23,4 +43,37 @@ body{
 .page-heading .subheading{
     font-size: 1rem;
     font-weight: 500;
+}
+
+.page-heading .text{
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: #888888;
+    line-height: 1.2;
+}
+
+/* 홈 내용 */
+.home-content{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    row-gap: 50px;
+    justify-content: space-between;
+}
+
+.home-content .post-preview{
+    width: 300px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #D9D9D9;
+}
+
+.home-content .post-info{
+    width: 300px;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+/* 푸터 수정 */
+footer .copyright{
+    letter-spacing: -1px;
 }
