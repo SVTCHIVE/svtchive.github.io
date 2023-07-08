@@ -14,17 +14,17 @@ body{
 }
 
 /* 내비게이션 수정 */
-#mainNav{
+nav#mainNav{
     background-color: #131313 !important;
     color: #D9D9D9;
     border-bottom: 1px solid rgba(255,255,255,0.5);
 }
 
-#mainNav .navbar-brand {
-    letter-spacing: -1px;
+nav#mainNav .navbar-brand {
+    letter-spacing: -1px !important;
 }
 
-#mainNav .navbar-toggler{
+nav#mainNav .navbar-toggler{
     background-color: #131313;
     border: 1px solid rgba(255,255,255,0.5);
 }
@@ -53,7 +53,7 @@ body{
 }
 
 /* 홈 내용 */
-.home-content{
+.col-lg-8.col-md-10.mx-auto.home-content{
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
@@ -61,17 +61,26 @@ body{
     justify-content: space-between;
 }
 
-.home-content .post-preview{
-    width: 300px;
-    padding-bottom: 20px;
-    border-bottom: 2px solid #D9D9D9;
+.col-lg-8.col-md-10.mx-auto.home-content hr{
+    display: none;
 }
 
-.home-content .post-info{
+.home-content .post-preview{
+    width: 300px;
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #D9D9D9;
+    color: #D9D9D9 !important;
+}
+
+span.post-info{
     width: 300px;
     font-weight: 500;
     font-size: 1rem;
+    letter-spacing: -1px;
 }
+
+/* 문서 내용 */
 
 /* 푸터 수정 */
 footer .copyright{
