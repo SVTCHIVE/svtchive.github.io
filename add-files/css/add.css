@@ -126,3 +126,36 @@ header.masthead .overlay{
     margin: 12px 0;
 }
 
+/* 응원법 상세 1 */
+.album-info{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.album-list{
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.album-title{
+    font-size: 0.95rem;
+    font-weight: 400;
+}
+
+
+.track-tab{
+    background-color: #313131;
+    border-radius: 4px;
+    margin: 10px 0;
+}
+
+.track-title{
+    font-size: 1.2rem;
+    color: #4A4A4A;
+    font-weight: 500;
+}
+
+.track-title.have{
+    color: #D9D9D9;
+}
