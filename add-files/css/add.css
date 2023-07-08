@@ -13,6 +13,10 @@ body{
     letter-spacing: -2px;
 }
 
+a, li{
+    text-decoration: none;
+}
+
 /* 내비게이션 수정 */
 nav#mainNav{
     background-color: #131313 !important;
@@ -98,10 +102,23 @@ header.masthead .overlay{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    row-gap: 50px;
 }
 
 .album-content{
     width: 300px;
+}
+
+.album-content img{
+    width: 300px;
+}
+
+.album-content span{
+    text-align: center;
+    font-size: 1.2rem;
+    letter-spacing: -1px;
+    font-weight: 600;
+    margin: 10px 0;
 }
 
 /* 푸터 수정 */
