@@ -8,7 +8,7 @@
 }
 
 body{
-    background-color: #131313 !important;
+    background-color: #131313;
     color: #D9D9D9 !important;
     letter-spacing: -1px;
 }
@@ -168,7 +168,7 @@ span.post-info{
 }
 
 .title-right{
-    color: #6E6E6E;
+    color: #6E6E6E !important;
     background-color: transparent !important;
 }
 
