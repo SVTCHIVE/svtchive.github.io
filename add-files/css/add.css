@@ -84,9 +84,9 @@ span.post-info{
 }
 
 /* 문서 내용 */
-/* header.masthead .overlay{
+header.masthead .overlay{
     opacity: 1;
-} */
+}
 
 .post .post-heading{
     padding: 150px 0 100px;
