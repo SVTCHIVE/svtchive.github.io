@@ -224,8 +224,8 @@ header.masthead .overlay-modify{
 .song-line{
     display: block !important;
     border: none;
-    height: 2px;
-    background-color: #4A4A4A;
+    height: 1px;
+    background-color: #313131 !important;
     margin: 30px 0; 
 }
 
