@@ -116,16 +116,16 @@ header.masthead .overlay-modify{
 }
 
 .album-content{
-    width: 300px;
+    width: 150px;
 }
 
 .album-content img{
-    width: 300px;
+    width: 150px;
 }
 
 .album-content  .album-name{
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 600;
     margin: 12px 0;
 }
