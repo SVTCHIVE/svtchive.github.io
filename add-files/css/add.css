@@ -97,13 +97,17 @@ header.masthead .overlay-modify{
 }
 
 .post .post-heading{
-    padding: 150px 0 100px;
+    padding: 150px 0 100px  !important;
     font-size: 2.25rem;
 }
 
 .post .subheading{
     font-weight: 400;
     font-size: 1.7rem;
+}
+
+.description{
+    margin: 0 0 30px !important;
 }
 
 /* 응원법 */
@@ -131,6 +135,10 @@ header.masthead .overlay-modify{
 }
 
 /* 응원법 상세 1 */
+.track-description{
+    margin: 10px 0 50px 0 !important;
+}
+
 .album-track{
     margin: 30px 0;
 }
