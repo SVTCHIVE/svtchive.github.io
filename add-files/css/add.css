@@ -192,3 +192,41 @@ header.masthead .overlay-modify{
     padding: 8px 12px;
     text-align: center;
 }
+
+/* 응원법 상세 2 */
+.song-container{
+    background-color: #313131 !important;
+    border-radius: 4px;
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 14px;
+}
+
+.song-title{
+    font-size: 1.2rem;
+    color: #D9D9D9 !important;
+    font-weight: 500;
+    background-color: transparent !important;
+}
+
+.song-right{
+    color: #6E6E6E !important;
+    background-color: transparent !important;
+}
+
+.img-box{
+    margin-bottom: 40px;
+}
+
+.img-box img{
+    width: 100%;
+    border-radius: 4px;
+}
+
+.media-box iframe{
+    /* width="560" height="315"  */
+    width: 100%;
+    border-radius: 4px;
+}
