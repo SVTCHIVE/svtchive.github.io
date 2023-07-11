@@ -225,13 +225,13 @@ header.masthead .overlay-modify{
     border-radius: 4px;
 }
 
-.media-box iframe{
-    /* width="560" height="315"  */
+/* .media-box iframe{
+    width="560" height="315" 
     width: 100%;
     border-radius: 4px;
-}
+} */
 
-.song-btn-box{
+/* .song-btn-box{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -246,4 +246,4 @@ header.masthead .overlay-modify{
     border-radius: 4px;
     padding: 8px 12px;
     text-align: center;
-}
+} */
