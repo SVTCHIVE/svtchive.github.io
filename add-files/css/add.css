@@ -216,13 +216,17 @@ header.masthead .overlay-modify{
     background-color: transparent !important;
 }
 
-.img-box{
-    margin-bottom: 40px;
-}
-
 .img-box img{
     width: 100%;
     border-radius: 4px;
+}
+
+.song-line{
+    display: block !important;
+    border: none;
+    height: 2px;
+    background-color: #4A4A4A;
+    margin: 30px 0; 
 }
 
 .media-box{
@@ -246,7 +250,7 @@ header.masthead .overlay-modify{
     align-items: center;
     flex-wrap: wrap;
     column-gap: 10px;
-    margin-top: 40px;
+    margin-top: 50px;
 }
 
 .song-btn-box .alpha-button{
