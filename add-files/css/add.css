@@ -260,3 +260,8 @@ header.masthead .overlay-modify{
     padding: 8px 12px;
     text-align: center;
 }
+
+/* 404 파일 */
+.m_container{
+    width: 60% !important;
+}
