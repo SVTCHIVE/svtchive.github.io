@@ -3,8 +3,8 @@ email:              ""
 description:        시간과 공간에 구애받지 않는 세븐틴 저장소🗂️
 author:             SVTCHIVE
 baseurl:            ""
-url:                "https://day6.kr"
-enforce_ssl:        "www.day6.kr"
+url:                "https://svtchive.kr"
+enforce_ssl:        "www.svtchive.kr"
 
 # Social Profiles
 twitter_username:   SVTCHIVE
